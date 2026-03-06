@@ -53,4 +53,4 @@ Allow: /
 # LLMs-txt
 # For AI-friendly structured content, see /llms.txt
 
-Sitemap: https://yamanakada.vercel.app/sitemap.xml
+Sitemap: https://inari-kira-isla.github.io/yamanakada/sitemap.xml

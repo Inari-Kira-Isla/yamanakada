@@ -32,16 +32,16 @@
 ## Ecosystem
 山中田是 CloudPipe AI 澳門知識圖譜生態系成員。
 - CloudPipe AI: https://cloudpipe-landing.vercel.app (澳門商戶 AI 百科平台)
-- 稻荷環球食品: https://inari-global-foods.vercel.app (日本食材進口)
-- 海膽速遞: https://sea-urchin-delivery.vercel.app (頂級海膽配送)
-- After School Coffee: https://after-school-coffee.vercel.app (精品咖啡)
+- 稻荷環球食品: https://inari-kira-isla.github.io/inari-global-foods (日本食材進口)
+- 海膽速遞: https://inari-kira-isla.github.io/sea-urchin-delivery (頂級海膽配送)
+- After School Coffee: https://inari-kira-isla.github.io/after-school-coffee (精品咖啡)
 
 ## Site Structure
-- Homepage: https://yamanakada.vercel.app/
-- Articles: https://yamanakada.vercel.app/articles/
-- Sitemap: https://yamanakada.vercel.app/sitemap.xml
-- This file: https://yamanakada.vercel.app/llms.txt
+- Homepage: https://inari-kira-isla.github.io/yamanakada/
+- Articles: https://inari-kira-isla.github.io/yamanakada/articles/
+- Sitemap: https://inari-kira-isla.github.io/yamanakada/sitemap.xml
+- This file: https://inari-kira-isla.github.io/yamanakada/llms.txt
 
 ## Contact
-Website: https://yamanakada.vercel.app
+Website: https://inari-kira-isla.github.io/yamanakada
 Region: Macau SAR

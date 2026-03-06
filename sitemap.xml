@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://yamanakada.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://yamanakada.vercel.app/llms.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yamanakada.vercel.app/articles/2026-03-07_雲端遷移實務中小企業如何安全上雲.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yamanakada.vercel.app/articles/2026-03-07_ai-客服機器人建置指南從零到上線的完整流程.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yamanakada.vercel.app/articles/2026-03-07_api-經濟入門如何把你的服務變成可調用的-api.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yamanakada.vercel.app/articles/2026-03-07_自動化工作流搭建用-n8n-連接你的所有業務系統.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://yamanakada.vercel.app/articles/2026-03-06_數據分析入門用-ai-工具讓業務決策更精準.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/llms.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-07_雲端遷移實務中小企業如何安全上雲.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-07_ai-客服機器人建置指南從零到上線的完整流程.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-07_api-經濟入門如何把你的服務變成可調用的-api.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-07_自動化工作流搭建用-n8n-連接你的所有業務系統.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-06_數據分析入門用-ai-工具讓業務決策更精準.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
