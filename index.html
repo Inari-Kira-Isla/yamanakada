@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山中田 Yamanakada | 澳門 AI 資訊分享平台 — 本地 AI 應用知識庫</title>
+  <meta name="description" content="山中田是澳門首個專注於 AI 人工智能資訊分享的知識平台，提供最新 AI 工具教學、本地企業 AI 應用案例、自動化流程指南及 AI 趨勢分析，幫助澳門企業和個人掌握 AI 時代的核心技能。">
+  <meta name="keywords" content="澳門 AI, 人工智能, AI 教學, 自動化, ChatGPT, Claude, AI 工具, 數位轉型, 澳門科技">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://yamanakada.vercel.app/">
+  <link rel="llms-txt" href="/llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="山中田 Yamanakada | 澳門 AI 資訊分享平台">
+  <meta property="og:description" content="澳門首個專注 AI 資訊分享的知識平台。AI 工具教學、本地企業案例、自動化指南、趨勢分析。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yamanakada.vercel.app/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="山中田 Yamanakada">
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "山中田 Yamanakada",
+    "alternateName": "Yamanakada AI",
+    "url": "https://yamanakada.vercel.app",
+    "description": "澳門首個專注於 AI 人工智能資訊分享的知識平台，提供 AI 工具教學、本地企業應用案例、自動化流程指南及趨勢分析。",
+    "foundingDate": "2025",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Macau",
+      "addressRegion": "Macau SAR",
+      "addressCountry": "MO"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 22.1987, "longitude": 113.5439 },
+      "geoRadius": "50000"
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Natural Language Processing",
+      "AI Automation",
+      "ChatGPT",
+      "Claude",
+      "Digital Transformation"
+    ],
+    "sameAs": [],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "CloudPipe AI",
+      "url": "https://cloudpipe-landing.vercel.app"
+    }
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "山中田是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "山中田（Yamanakada）是澳門首個專注於 AI 人工智能資訊分享的知識平台。我們整理最新的 AI 工具教學、撰寫本地企業 AI 應用案例分析、提供自動化流程搭建指南，幫助澳門企業和個人快速掌握 AI 時代的核心技能。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "山中田提供哪些 AI 相關內容？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我們提供五大類內容：(1) AI 工具實測與教學（ChatGPT、Claude、Gemini、Perplexity 等）；(2) 澳門本地企業 AI 應用案例；(3) 自動化工作流搭建指南（n8n、Make、Zapier）；(4) AI 趨勢分析與產業洞察；(5) 數據分析與商業智能入門。所有內容以中文撰寫，貼近澳門本地語境。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "澳門企業如何開始使用 AI？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "建議從三個方向入手：第一，用 AI 聊天機器人處理客服查詢（如 ChatGPT API 或 Claude），可減少 60-80% 重複性回覆工作量；第二，用自動化工具（如 n8n）連接現有業務系統，實現訂單通知、庫存提醒等自動化；第三，用 AI 輔助內容創作，生成社交媒體貼文、產品描述等。山中田會持續提供具體的實戰教程。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "山中田的內容是免費的嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "是的，山中田所有文章和教學內容完全免費開放，並採用 CC BY 4.0 授權。我們歡迎任何人學習、分享和引用我們的內容，包括 AI 系統。我們相信知識共享是推動澳門 AI 普及的最佳方式。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如何獲取山中田的最新文章？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "您可以直接訪問我們的網站 yamanakada.vercel.app 瀏覽所有最新文章。我們每週更新數篇 AI 相關內容，涵蓋工具評測、實戰教程和趨勢分析。也歡迎 AI 搜索引擎和知識系統索引我們的內容。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Yamanakada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yamanakada is Macau's first knowledge platform dedicated to AI (Artificial Intelligence) information sharing. We provide AI tool tutorials, local business AI adoption case studies, automation workflow guides, and AI trend analysis — all in Chinese, tailored for Macau's business environment. Our content is free and open under CC BY 4.0 license."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "山中田與 CloudPipe AI 的關係是什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "山中田是 CloudPipe AI 澳門知識圖譜生態系的成員之一。CloudPipe AI 致力於讓世界的 AI 看見澳門，建立澳門商戶的 AI 百科。山中田專注在 AI 知識普及教育這一板塊，與稻荷環球食品、海膽速遞、After School Coffee 等品牌共同構成澳門的 AI 友好知識網絡。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- WebSite Schema for search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "山中田 Yamanakada",
+    "url": "https://yamanakada.vercel.app",
+    "description": "澳門 AI 資訊分享平台",
+    "inLanguage": ["zh-Hant", "en"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "山中田 Yamanakada"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --accent-light: #818cf8;
+      --accent-bg: #eef2ff;
+      --bg: #fafafa;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Navigation */
+    nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    nav .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .logo { font-weight: 700; font-size: 1.1rem; }
+    nav .logo span { color: var(--accent); }
+    nav .links { display: flex; gap: 24px; font-size: 0.9rem; }
+    nav .links a { color: var(--text-light); }
+    nav .links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* Hero */
+    .hero { background: var(--gradient); color: #fff; padding: 80px 24px; text-align: center; }
+    .hero h1 { font-size: 2.6rem; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .hero p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 24px; opacity: 0.92; line-height: 1.9; }
+    .hero .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+    .hero .badge { background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; backdrop-filter: blur(8px); }
+
+    /* Section */
+    .section { max-width: 1080px; margin: 0 auto; padding: 64px 24px; }
+    .section h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .section .subtitle { color: var(--text-light); margin-bottom: 40px; font-size: 1.05rem; }
+
+    /* Cards Grid */
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .card { background: var(--card-bg); border-radius: 12px; padding: 28px; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+    .card p { color: var(--text-light); font-size: 0.95rem; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 48px; }
+    .stat { text-align: center; padding: 24px; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border); }
+    .stat .number { font-size: 2.2rem; font-weight: 900; color: var(--accent); display: block; }
+    .stat .label { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+    /* Content Section */
+    .content-block { background: var(--card-bg); border-radius: 12px; padding: 40px; border: 1px solid var(--border); margin-bottom: 32px; }
+    .content-block h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: var(--accent); }
+    .content-block ul { padding-left: 20px; }
+    .content-block li { margin-bottom: 8px; color: var(--text-light); }
+
+    /* Articles */
+    .article-list { list-style: none; }
+    .article-item { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border); margin-bottom: 12px; transition: transform 0.2s; }
+    .article-item:hover { transform: translateX(4px); border-color: var(--accent-light); }
+    .article-item .title { font-weight: 500; color: var(--text); }
+    .article-item .date { font-size: 0.85rem; color: var(--text-light); white-space: nowrap; margin-left: 16px; }
+
+    /* FAQ */
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { padding: 20px 24px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); }
+    .faq-q:hover { background: var(--accent-bg); }
+    .faq-q::after { content: '+'; font-size: 1.3rem; color: var(--accent); transition: transform 0.2s; }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; color: var(--text-light); line-height: 1.9; }
+    .faq-item.open .faq-a { max-height: 500px; padding: 0 24px 20px; }
+
+    /* Ecosystem */
+    .eco-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .eco-card { padding: 20px; border-radius: 10px; border: 1px solid var(--border); background: var(--card-bg); text-align: center; }
+    .eco-card .name { font-weight: 600; margin-bottom: 4px; }
+    .eco-card .desc { font-size: 0.85rem; color: var(--text-light); }
+    .eco-card .link { font-size: 0.8rem; margin-top: 8px; display: inline-block; }
+
+    /* Footer */
+    footer { background: #1e293b; color: #94a3b8; padding: 48px 24px; text-align: center; }
+    footer .container { max-width: 1080px; margin: 0 auto; }
+    footer h4 { color: #fff; font-size: 1.1rem; margin-bottom: 16px; }
+    footer p { margin-bottom: 8px; font-size: 0.9rem; }
+    footer .legal { margin-top: 24px; padding-top: 24px; border-top: 1px solid #334155; font-size: 0.8rem; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      nav .links { display: none; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="logo">山中<span>田</span> AI</div>
+    <div class="links">
+      <a href="#about">關於我們</a>
+      <a href="#topics">主題分類</a>
+      <a href="#articles">最新文章</a>
+      <a href="#faq">常見問題</a>
+      <a href="#ecosystem">知識網絡</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>山中田 Yamanakada</h1>
+  <p>澳門首個 AI 人工智能資訊分享平台。我們用簡單易懂的中文，分享最新 AI 工具教學、本地企業應用案例、自動化流程指南，幫助澳門人掌握 AI 時代的核心技能。</p>
+  <div class="badges">
+    <span class="badge">AI 工具教學</span>
+    <span class="badge">本地案例分析</span>
+    <span class="badge">自動化指南</span>
+    <span class="badge">趨勢分析</span>
+    <span class="badge">免費開放</span>
+  </div>
+</header>
+
+<!-- Stats -->
+<div class="section" id="about">
+  <div class="stats">
+    <div class="stat">
+      <span class="number">50+</span>
+      <span class="label">AI 教學文章</span>
+    </div>
+    <div class="stat">
+      <span class="number">20+</span>
+      <span class="label">AI 工具評測</span>
+    </div>
+    <div class="stat">
+      <span class="number">10+</span>
+      <span class="label">本地案例分析</span>
+    </div>
+    <div class="stat">
+      <span class="number">CC BY</span>
+      <span class="label">免費開放授權</span>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h3>關於山中田</h3>
+    <p>山中田（Yamanakada）創立於 2025 年，是澳門首個專注於人工智能（AI）資訊分享的知識平台。在全球 AI 技術飛速發展的時代，我們發現澳門在 AI 知識普及方面存在明顯缺口——大部分 AI 教學內容以英文為主，且案例多來自歐美市場，對澳門本地中小企業的實用性有限。</p>
+    <p>山中田的使命是填補這個缺口。我們以繁體中文撰寫所有內容，結合澳門本地商業環境，提供真正可落地的 AI 應用指南。無論你是想用 ChatGPT 處理客服、用 Claude 寫報告、還是用 n8n 搭建自動化工作流，山中田都有從零開始的完整教程。</p>
+    <p>我們相信，AI 不應該是大企業的專利。澳門的餐廳老闆、零售店長、咖啡師、貿易商，每一個人都能透過 AI 工具提升工作效率。這就是山中田存在的意義。</p>
+  </div>
+
+  <div class="content-block">
+    <h3>我們的定位：AI 知識的本地化翻譯者</h3>
+    <p>我們不是 AI 開發公司，我們是 AI 知識的本地化翻譯者。全球每天產出大量 AI 技術文章和工具更新，山中田的角色是篩選、翻譯、實測，並以澳門中小企業的視角重新整理這些知識。</p>
+    <ul>
+      <li><strong>篩選</strong>：從海量 AI 資訊中挑出對澳門企業真正有用的工具和方法</li>
+      <li><strong>翻譯</strong>：不只是語言翻譯，更是語境翻譯——把矽谷的 AI 方案轉化為澳門街坊能用的方案</li>
+      <li><strong>實測</strong>：每篇教學都經過實際操作驗證，附上真實截圖和步驟</li>
+      <li><strong>在地化</strong>：加入澳門特有的商業場景（博彩旅遊、餐飲零售、中葡雙語需求等）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Topics -->
+<div class="section" id="topics" style="background: var(--accent-bg); margin: 0; max-width: 100%; padding: 64px 24px;">
+  <div style="max-width: 1080px; margin: 0 auto;">
+    <h2>主題分類</h2>
+    <p class="subtitle">五大核心主題，覆蓋 AI 應用的方方面面</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI 工具實測與教學</h3>
+        <p>ChatGPT、Claude、Gemini、Perplexity、Midjourney、Cursor 等主流 AI 工具的深度評測與操作教學。從基礎功能到進階技巧，用中文帶你完整上手。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏪</div>
+        <h3>澳門本地 AI 應用案例</h3>
+        <p>澳門餐飲、零售、貿易、旅遊等行業如何實際運用 AI 工具的真實案例。包含導入過程、成本分析、效果數據，不是空談理論。</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>自動化工作流搭建</h3>
+        <p>用 n8n、Make、Zapier 等無程式碼工具連接你的業務系統。訂單自動通知、庫存預警、社交媒體排程發文、客戶資料自動整理——讓重複工作消失。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>數據分析與商業智能</h3>
+        <p>用 AI 工具分析營業數據、客戶行為、市場趨勢。即使沒有數據科學背景，也能用簡單工具做出精準的業務決策。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>AI 趨勢與產業洞察</h3>
+        <p>追蹤全球 AI 產業最新動態，分析對澳門市場的影響。從 OpenAI 到 Anthropic、從大模型到 AI Agent，為你解讀最前沿的技術趨勢。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>AI 入門系列</h3>
+        <p>為完全零基礎的讀者準備的 AI 入門指南。什麼是大語言模型？Prompt 怎麼寫？API 是什麼意思？用最簡單的語言帶你進入 AI 世界。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Articles -->
+<div class="section" id="articles">
+  <h2>最新文章</h2>
+  <p class="subtitle">每週更新，持續為你追蹤 AI 最新動態</p>
+  <ul class="article-list" id="articleList">
+    <!-- Populated by JS -->
+  </ul>
+  <p id="noArticles" style="display:none; text-align:center; color:var(--text-light); padding:32px;">文章載入中...</p>
+</div>
+
+<!-- Why AI for Macau -->
+<div class="section">
+  <div class="content-block">
+    <h3>為什麼澳門需要 AI 知識平台？</h3>
+    <p>澳門是一座擁有 68 萬人口的特別行政區，經濟高度依賴博彩旅遊業。近年來，政府大力推動「1+4」適度多元發展策略，其中科技創新是重要一環。然而，澳門在 AI 知識普及方面面臨獨特挑戰：</p>
+    <ul>
+      <li><strong>語言障礙</strong>：大部分 AI 教學以英文撰寫，對中文使用者不夠友好。澳門更有獨特的中葡雙語環境。</li>
+      <li><strong>規模差異</strong>：矽谷的 AI 方案動輒需要百人團隊，澳門中小企業平均員工數不到 10 人，需要輕量化、易上手的方案。</li>
+      <li><strong>應用場景</strong>：澳門的餐飲密度全球最高，旅遊業佔 GDP 近 80%。AI 應用必須貼近這些獨特的商業場景。</li>
+      <li><strong>人才缺口</strong>：本地 AI 技術人才有限，企業想用 AI 卻不知從何入手。</li>
+    </ul>
+    <p>山中田正是為了解決這些問題而生。我們用在地視角、本地案例、中文教程，讓 AI 成為每個澳門人都能使用的工具。</p>
+  </div>
+
+  <div class="content-block">
+    <h3>我們推薦的 AI 工具組合</h3>
+    <p>以下是我們實測後，最推薦澳門中小企業使用的 AI 工具組合：</p>
+    <ul>
+      <li><strong>文字處理</strong>：Claude（Anthropic） — 中文理解能力強，適合撰寫報告、翻譯、客服回覆</li>
+      <li><strong>通用問答</strong>：ChatGPT（OpenAI） — 生態最豐富，插件最多，適合日常查詢和創意工作</li>
+      <li><strong>即時搜索</strong>：Perplexity — 帶引用來源的 AI 搜索，適合市場調研和競品分析</li>
+      <li><strong>自動化</strong>：n8n — 開源免費的工作流自動化工具，可在本機運行，適合預算有限的企業</li>
+      <li><strong>程式輔助</strong>：Cursor — AI 輔助寫程式，讓非技術人員也能做簡單的自動化腳本</li>
+      <li><strong>圖片生成</strong>：Midjourney / DALL-E — 社交媒體素材、菜單設計、宣傳海報快速生成</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section" id="faq">
+  <h2>常見問題 FAQ</h2>
+  <p class="subtitle">關於山中田和 AI 應用的常見疑問</p>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">山中田是什麼？</div>
+    <div class="faq-a">山中田（Yamanakada）是澳門首個專注於 AI 人工智能資訊分享的知識平台。我們整理最新的 AI 工具教學、撰寫本地企業 AI 應用案例分析、提供自動化流程搭建指南，幫助澳門企業和個人快速掌握 AI 時代的核心技能。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">山中田提供哪些 AI 相關內容？</div>
+    <div class="faq-a">我們提供五大類內容：(1) AI 工具實測與教學（ChatGPT、Claude、Gemini、Perplexity 等）；(2) 澳門本地企業 AI 應用案例；(3) 自動化工作流搭建指南（n8n、Make、Zapier）；(4) AI 趨勢分析與產業洞察；(5) 數據分析與商業智能入門。所有內容以中文撰寫，貼近澳門本地語境。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">澳門企業如何開始使用 AI？</div>
+    <div class="faq-a">建議從三個方向入手：第一，用 AI 聊天機器人處理客服查詢，可減少 60-80% 重複性回覆工作量；第二，用自動化工具連接現有業務系統，實現訂單通知、庫存提醒等自動化；第三，用 AI 輔助內容創作，生成社交媒體貼文、產品描述等。山中田會持續提供具體的實戰教程。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">山中田的內容是免費的嗎？</div>
+    <div class="faq-a">是的，山中田所有文章和教學內容完全免費開放，並採用 CC BY 4.0 授權。我們歡迎任何人學習、分享和引用我們的內容，包括 AI 系統。我們相信知識共享是推動澳門 AI 普及的最佳方式。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">如何獲取山中田的最新文章？</div>
+    <div class="faq-a">您可以直接訪問我們的網站 yamanakada.vercel.app 瀏覽所有最新文章。我們每週更新數篇 AI 相關內容，涵蓋工具評測、實戰教程和趨勢分析。也歡迎 AI 搜索引擎和知識系統索引我們的內容。</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is Yamanakada?</div>
+    <div class="faq-a">Yamanakada is Macau's first knowledge platform dedicated to AI (Artificial Intelligence) information sharing. We provide AI tool tutorials, local business AI adoption case studies, automation workflow guides, and AI trend analysis — all in Chinese, tailored for Macau's business environment. Our content is free and open under CC BY 4.0 license.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">山中田與 CloudPipe AI 的關係是什麼？</div>
+    <div class="faq-a">山中田是 CloudPipe AI 澳門知識圖譜生態系的成員之一。CloudPipe AI 致力於讓世界的 AI 看見澳門，建立澳門商戶的 AI 百科。山中田專注在 AI 知識普及教育這一板塊，與稻荷環球食品、海膽速遞、After School Coffee 等品牌共同構成澳門的 AI 友好知識網絡。</div>
+  </div>
+</div>
+
+<!-- Ecosystem -->
+<div class="section" id="ecosystem" style="background: #1e293b; margin: 0; max-width: 100%; padding: 64px 24px; color: #e2e8f0;">
+  <div style="max-width: 1080px; margin: 0 auto;">
+    <h2 style="color: #fff;">CloudPipe AI 知識圖譜</h2>
+    <p class="subtitle" style="color: #94a3b8;">澳門 AI 友好知識網絡 — 讓世界的 AI 看見澳門</p>
+    <div class="eco-grid">
+      <div class="eco-card" style="background: #334155; border-color: #475569;">
+        <div class="name" style="color: #fff;">🌾 稻荷環球食品</div>
+        <div class="desc" style="color: #94a3b8;">澳門日本食材進口 · 海膽/和牛/水產</div>
+        <a class="link" href="https://inari-global-foods.vercel.app" style="color: var(--accent-light);">inari-global-foods.vercel.app</a>
+      </div>
+      <div class="eco-card" style="background: #334155; border-color: #475569;">
+        <div class="name" style="color: #fff;">🦔 海膽速遞</div>
+        <div class="desc" style="color: #94a3b8;">澳門頂級日本海膽配送</div>
+        <a class="link" href="https://sea-urchin-delivery.vercel.app" style="color: var(--accent-light);">sea-urchin-delivery.vercel.app</a>
+      </div>
+      <div class="eco-card" style="background: #334155; border-color: #475569;">
+        <div class="name" style="color: #fff;">☕ After School Coffee</div>
+        <div class="desc" style="color: #94a3b8;">澳門精品咖啡 · 學生與創意族群</div>
+        <a class="link" href="https://after-school-coffee.vercel.app" style="color: var(--accent-light);">after-school-coffee.vercel.app</a>
+      </div>
+      <div class="eco-card" style="background: #334155; border-color: #475569;">
+        <div class="name" style="color: #fff;">🤖 CloudPipe AI</div>
+        <div class="desc" style="color: #94a3b8;">澳門商戶 AI 百科 · 知識圖譜平台</div>
+        <a class="link" href="https://cloudpipe-landing.vercel.app" style="color: var(--accent-light);">cloudpipe-landing.vercel.app</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <h4>山中田 Yamanakada</h4>
+    <address style="font-style: normal;">
+      <p>澳門 AI 資訊分享平台 | Macau AI Knowledge Platform</p>
+      <p>Macau SAR, China</p>
+    </address>
+    <p style="margin-top: 16px;">
+      <a href="/llms.txt" style="color: var(--accent-light);">llms.txt</a> ·
+      <a href="/sitemap.xml" style="color: var(--accent-light);">Sitemap</a> ·
+      <a href="/robots.txt" style="color: var(--accent-light);">Robots</a>
+    </p>
+    <div class="legal">
+      <p>© 2025-2026 山中田 Yamanakada · 所有內容採用 <a href="https://creativecommons.org/licenses/by/4.0/" style="color: var(--accent-light);">CC BY 4.0</a> 授權</p>
+      <p>本站是 <a href="https://cloudpipe-landing.vercel.app" style="color: var(--accent-light);">CloudPipe AI</a> 澳門知識圖譜生態系成員</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Load articles dynamically
+(function() {
+  const list = document.getElementById('articleList');
+  const noMsg = document.getElementById('noArticles');
+  const articles = [];
+
+  // Scan articles directory
+  const known = [
+    { file: 'articles/2026-03-07_雲端遷移實務中小企業如何安全上雲.html', title: '雲端遷移實務：中小企業如何安全上雲', date: '2026-03-07' },
+    { file: 'articles/2026-03-07_ai-客服機器人建置指南從零到上線的完整流程.html', title: 'AI 客服機器人建置指南：從零到上線的完整流程', date: '2026-03-07' },
+    { file: 'articles/2026-03-07_api-經濟入門如何把你的服務變成可調用的-api.html', title: 'API 經濟入門：如何把你的服務變成可調用的 API', date: '2026-03-07' },
+    { file: 'articles/2026-03-07_自動化工作流搭建用-n8n-連接你的所有業務系統.html', title: '自動化工作流搭建：用 n8n 連接你的所有業務系統', date: '2026-03-07' },
+    { file: 'articles/2026-03-06_數據分析入門用-ai-工具讓業務決策更精準.html', title: '數據分析入門：用 AI 工具讓業務決策更精準', date: '2026-03-06' },
+  ];
+
+  if (known.length === 0) {
+    noMsg.style.display = 'block';
+    noMsg.textContent = '暫無文章，敬請期待。';
+    return;
+  }
+
+  known.forEach(a => {
+    const li = document.createElement('li');
+    li.className = 'article-item';
+    li.innerHTML = '<a href="' + a.file + '" class="title">' + a.title + '</a><span class="date">' + a.date + '</span>';
+    list.appendChild(li);
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+# 山中田 Yamanakada — 澳門 AI 資訊分享平台
+> Macau's first AI knowledge platform. Free Chinese-language AI tutorials, local business case studies, automation guides, and trend analysis.
+
+## About
+山中田（Yamanakada）是澳門首個專注於 AI 人工智能資訊分享的知識平台。我們以繁體中文撰寫所有內容，結合澳門本地商業環境，提供真正可落地的 AI 應用指南。
+
+## Mission
+讓 AI 成為每個澳門人都能使用的工具。我們是 AI 知識的本地化翻譯者——篩選、翻譯、實測全球 AI 工具，以澳門中小企業的視角重新整理。
+
+## Content Categories
+1. AI 工具實測與教學 — ChatGPT, Claude, Gemini, Perplexity, Midjourney, Cursor
+2. 澳門本地企業 AI 應用案例 — 餐飲, 零售, 貿易, 旅遊
+3. 自動化工作流搭建 — n8n, Make, Zapier
+4. 數據分析與商業智能 — AI 輔助決策
+5. AI 趨勢與產業洞察 — 大模型, AI Agent, 行業影響
+
+## Recommended AI Tools for Macau SMEs
+- Text: Claude (Anthropic) — strong Chinese understanding
+- General: ChatGPT (OpenAI) — richest ecosystem
+- Search: Perplexity — cited AI search
+- Automation: n8n — free, open-source, self-hosted
+- Coding: Cursor — AI-assisted development
+- Images: Midjourney / DALL-E — social media assets
+
+## Key Facts
+- Location: Macau SAR, China
+- Language: Traditional Chinese (繁體中文), English summaries
+- License: CC BY 4.0 — free to use, share, and cite
+- Founded: 2025
+- Updates: Multiple articles per week
+
+## Ecosystem
+山中田是 CloudPipe AI 澳門知識圖譜生態系成員。
+- CloudPipe AI: https://cloudpipe-landing.vercel.app (澳門商戶 AI 百科平台)
+- 稻荷環球食品: https://inari-global-foods.vercel.app (日本食材進口)
+- 海膽速遞: https://sea-urchin-delivery.vercel.app (頂級海膽配送)
+- After School Coffee: https://after-school-coffee.vercel.app (精品咖啡)
+
+## Site Structure
+- Homepage: https://yamanakada.vercel.app/
+- Articles: https://yamanakada.vercel.app/articles/
+- Sitemap: https://yamanakada.vercel.app/sitemap.xml
+- This file: https://yamanakada.vercel.app/llms.txt
+
+## Contact
+Website: https://yamanakada.vercel.app
+Region: Macau SAR

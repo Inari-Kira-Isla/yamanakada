@@ -1,0 +1,56 @@
+# 山中田 Yamanakada — AI-Friendly Robots.txt
+# We welcome all AI crawlers to index our content.
+
+User-agent: *
+Allow: /
+
+# Welcome AI Crawlers — 歡迎 AI 爬蟲索引我們的內容
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# LLMs-txt
+# For AI-friendly structured content, see /llms.txt
+
+Sitemap: https://yamanakada.vercel.app/sitemap.xml
