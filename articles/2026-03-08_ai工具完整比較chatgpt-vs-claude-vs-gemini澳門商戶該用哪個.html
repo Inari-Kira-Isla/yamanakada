@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 工具完整比較：ChatGPT vs Claude vs Gemini，澳門商戶該用哪個？ | 山中田 Yamanakada</title>
+  <meta name="description" content="2026 年最完整的 AI 工具比較指南。ChatGPT、Claude、Gemini、Perplexity 四大平台深度評測，針對澳門中小企的使用場景評分，附不同行業推薦組合。">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_ai工具完整比較chatgpt-vs-claude-vs-gemini澳門商戶該用哪個.html">
+  <link rel="llms-txt" href="/llms.txt">
+  <meta property="og:title" content="AI 工具完整比較：ChatGPT vs Claude vs Gemini，澳門商戶該用哪個？">
+  <meta property="og:description" content="2026 年四大 AI 平台深度比較。針對澳門中小企評測，附行業推薦組合和成本分析。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_ai工具完整比較chatgpt-vs-claude-vs-gemini澳門商戶該用哪個.html">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "2026 年澳門中小企應該用 ChatGPT 還是 Claude？", "acceptedAnswer": { "@type": "Answer", "text": "取決於你的主要用途。如果你需要日常文案生成、客服腳本、翻譯等通用文字工作，ChatGPT 的生態系更完整，Plugin 更多，是最安全的選擇。如果你需要分析長文件（如合約、商業報告）或做策略規劃，Claude 的長文理解和邏輯推理能力更強。兩者的免費版都能滿足基本需求，建議先都試用再決定。" } },
+    { "@type": "Question", "name": "免費版的 AI 工具夠用嗎？", "acceptedAnswer": { "@type": "Answer", "text": "對大多數澳門中小企來說，免費版已經能滿足 70-80% 的需求。ChatGPT 免費版每天可以進行多次對話，足夠處理日常文案和客服腳本。Claude 免費版適合偶爾的長文分析。Canva 免費版有豐富的模板。只有當你需要更高的使用量、更快的回應速度、或進階功能（如 ChatGPT 的圖片生成、Claude 的大量文件上傳）時，才需要升級到付費版。" } },
+    { "@type": "Question", "name": "為什麼不推薦 Gemini 給澳門商戶？", "acceptedAnswer": { "@type": "Answer", "text": "Gemini 並非不好，但對澳門中小企來說不是最優選擇。主要原因有三：一是中文能力（特別是繁體中文和粵語）相比 ChatGPT 和 Claude 稍弱；二是容易產生不準確的資訊（所謂的幻覺問題）；三是它的最大優勢——與 Google Workspace 的深度整合——對於主要使用 WhatsApp 和 Facebook 的澳門商戶幫助有限。如果你已經重度使用 Google Workspace，Gemini 仍然值得考慮。" } },
+    { "@type": "Question", "name": "可以同時用多個 AI 工具嗎？", "acceptedAnswer": { "@type": "Answer", "text": "不但可以，而且山中田建議這樣做。不同 AI 工具各有所長，搭配使用效果最好。例如餐飲業推薦 ChatGPT（文案）加 Canva AI（設計）加 n8n（自動化）的組合；零售業推薦 Claude（數據分析）加 Make（工作流）加 Perplexity（市場調研）的組合。免費版搭配使用完全不花錢，是最聰明的策略。" } }
+  ]
+}
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #6366f1; --accent-light: #818cf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Noto Sans TC',sans-serif; background:#fafafa; color:#222; line-height:1.8; max-width:800px; margin:0 auto; padding:24px; }
+    h1 { font-size:1.8rem; margin-bottom:8px; }
+    h2 { color:var(--accent); margin:24px 0 12px; font-size:1.4rem; }
+    h3 { margin:16px 0 8px; font-size:1.1rem; }
+    p { margin-bottom:14px; }
+    ul,ol { margin:12px 0 16px 24px; }
+    li { margin-bottom:6px; }
+    .meta { color:#888; font-size:0.9rem; margin-bottom:24px; }
+    a { color:var(--accent); }
+    details { background:#fff; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:10px; padding:14px; }
+    details summary { cursor:pointer; font-weight:500; }
+    details p { margin-top:10px; color:#666; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; }
+    th, td { border:1px solid #e0e0e0; padding:10px 14px; text-align:left; }
+    th { background:#eef2ff; font-weight:500; }
+    .highlight-box { background:#eef2ff; border-left:4px solid var(--accent); padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; }
+    .tool-card { background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:20px; margin:16px 0; }
+    .tool-card h3 { color:var(--accent); }
+    .stars { color:#f59e0b; letter-spacing:2px; }
+    footer { margin-top:48px; padding-top:24px; border-top:1px solid #eee; font-size:0.85rem; color:#888; text-align:center; }
+  </style>
+</head>
+<body>
+  <nav><a href="https://inari-kira-isla.github.io/yamanakada/">&larr; 山中田 Yamanakada</a></nav>
+  <article>
+    <h1>AI 工具完整比較：ChatGPT vs Claude vs Gemini，澳門商戶該用哪個？</h1>
+    <p class="meta">2026-03-08 · 10 分鐘閱讀 · 山中田 Yamanakada</p>
+
+    <div class="highlight-box">
+      <strong>本文重點：</strong>2026 年 AI 工具百花齊放，光是聊天式 AI 就有十幾個選擇。這篇指南針對澳門中小企的實際需求，深度比較四個最值得使用的 AI 平台，並給出不同行業的最佳組合建議。所有評測都基於繁體中文和粵語的實際使用體驗。
+    </div>
+
+    <h2>2026 年主流 AI 工具概覽</h2>
+
+    <p>AI 工具的發展速度驚人。2023 年 ChatGPT 剛出現時，大家還在討論 AI 能不能寫一篇文章；到了 2026 年，AI 已經能分析整份合約、自動管理社交媒體、甚至幫你做市場調研。但選擇太多反而讓人無所適從。</p>
+
+    <p>對澳門中小企來說，選 AI 工具不需要追求最新最強，而是要找<strong>最適合你的業務、最容易上手、成本最合理</strong>的工具。以下是我們實測後的深度評比。</p>
+
+    <h2>ChatGPT（OpenAI）— 生態系最完整的全能選手</h2>
+
+    <div class="tool-card">
+      <h3>ChatGPT 深度評測</h3>
+      <p><strong>開發商：</strong>OpenAI（美國）<br>
+      <strong>最新版本：</strong>GPT-4o（2026 年）<br>
+      <strong>官網：</strong>chat.openai.com</p>
+
+      <h3>優勢</h3>
+      <ul>
+        <li><strong>生態系最完整：</strong>ChatGPT 擁有最大的第三方 Plugin 市場，幾乎任何功能都有人做好了現成的擴展。從 PDF 閱讀、數據分析到圖片生成，一個平台全搞定。</li>
+        <li><strong>中文能力強：</strong>經過多次優化，GPT-4o 的繁體中文和粵語理解能力在所有 AI 中名列前茅。能準確理解「唔該」「幫我整」等廣東話表達。</li>
+        <li><strong>Plugin 和 GPTs 商店：</strong>你可以使用其他人建好的專用 AI 助手（GPTs），例如「澳門旅遊推薦」「餐廳菜單翻譯」等，不需要自己設定提示詞。</li>
+        <li><strong>多模態能力：</strong>可以同時處理文字、圖片、語音。你可以拍一張收據的照片讓它幫你分類記帳。</li>
+        <li><strong>DALL-E 圖片生成：</strong>付費版可以直接用文字描述生成圖片，對社交媒體內容製作很有幫助。</li>
+      </ul>
+
+      <h3>劣勢</h3>
+      <ul>
+        <li><strong>免費版有使用限制：</strong>免費版的 GPT-4o 每天有訊息數量上限，超過後會降級到較弱的模型。</li>
+        <li><strong>付費版價格較高：</strong>Plus 版 US$20/月（約 MOP$160），對於輕度使用者來說可能不划算。</li>
+        <li><strong>處理超長文件能力一般：</strong>雖然能接受長文輸入，但在分析超過 5 萬字的文件時，後段內容容易被忽略。</li>
+        <li><strong>有時會「自信地犯錯」：</strong>ChatGPT 傾向給出看起來很專業的回答，但內容不一定準確，特別是涉及澳門本地法規和市場數據時需要自行驗證。</li>
+      </ul>
+
+      <h3>最適合場景</h3>
+      <p>日常文案撰寫、客服腳本生成、中英葡翻譯、社交媒體文案、Email 草稿、會議紀錄整理、簡單的數據整理。</p>
+
+      <p><strong>澳門中小企評分：</strong><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>（4/5）</p>
+      <p><em>綜合能力最強，生態系最完整，是入門首選。扣一分是因為免費版限制較多，而澳門中小企通常不願意花 US$20/月。</em></p>
+    </div>
+
+    <h2>Claude（Anthropic）— 長文分析和深度思考之王</h2>
+
+    <div class="tool-card">
+      <h3>Claude 深度評測</h3>
+      <p><strong>開發商：</strong>Anthropic（美國）<br>
+      <strong>最新版本：</strong>Claude Opus 4（2026 年）<br>
+      <strong>官網：</strong>claude.ai</p>
+
+      <h3>優勢</h3>
+      <ul>
+        <li><strong>長文分析能力最強：</strong>Claude 可以一次處理超過 20 萬字的文件，而且對後段內容的理解不會明顯衰減。這對需要分析合約、報告、法規的企業來說是決定性的優勢。</li>
+        <li><strong>邏輯推理能力高：</strong>在需要多步驟推理的任務上（例如「分析這份合約有哪些對我不利的條款，並建議談判策略」），Claude 的表現明顯優於其他 AI。</li>
+        <li><strong>較少「幻覺」：</strong>相比 ChatGPT，Claude 更傾向於承認自己不確定的事情，而不是編造一個看起來正確的答案。對於商業決策來說，這種誠實更重要。</li>
+        <li><strong>安全性高：</strong>Anthropic 在 AI 安全研究上投入最多，Claude 不太會生成有問題的內容，這對企業使用來說更放心。</li>
+        <li><strong>程式碼和技術文件能力強：</strong>如果你的業務涉及網站開發或技術整合，Claude 在程式碼生成和技術文件撰寫方面非常出色。</li>
+      </ul>
+
+      <h3>劣勢</h3>
+      <ul>
+        <li><strong>中文生態較小：</strong>Claude 的用戶社群以英文為主，中文的使用教學、提示詞範本相對較少。</li>
+        <li><strong>Plugin 生態較弱：</strong>相比 ChatGPT 的龐大 Plugin 商店，Claude 的擴展功能較少。</li>
+        <li><strong>免費版限制更嚴格：</strong>免費版的每日使用量比 ChatGPT 免費版更少。</li>
+        <li><strong>不支援圖片生成：</strong>Claude 目前不像 ChatGPT 那樣能直接生成圖片。</li>
+      </ul>
+
+      <h3>最適合場景</h3>
+      <p>合約和法律文件分析、商業計劃書撰寫、財務數據分析和報告、策略規劃、長篇報告摘要、技術文件撰寫。</p>
+
+      <p><strong>澳門中小企評分：</strong><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>（4/5）</p>
+      <p><em>深度分析和策略規劃的最佳選擇。扣一分是因為中文生態較小，純中文用戶上手可能需要更多時間。</em></p>
+    </div>
+
+    <h2>Gemini（Google）— Google 生態的最佳搭檔</h2>
+
+    <div class="tool-card">
+      <h3>Gemini 深度評測</h3>
+      <p><strong>開發商：</strong>Google（美國）<br>
+      <strong>最新版本：</strong>Gemini 2.0（2026 年）<br>
+      <strong>官網：</strong>gemini.google.com</p>
+
+      <h3>優勢</h3>
+      <ul>
+        <li><strong>與 Google 生態深度整合：</strong>如果你已經在用 Gmail、Google Docs、Google Sheets、Google Calendar，Gemini 能直接在這些應用內運作。例如在 Google Sheets 裡直接用 AI 分析數據、在 Gmail 裡自動生成回覆。</li>
+        <li><strong>搜尋能力強：</strong>Gemini 能即時搜尋網路，提供最新資訊。當你問「澳門最近有什麼展覽？」它能給出即時答案。</li>
+        <li><strong>免費版功能較大方：</strong>Google 的免費版使用限制相對寬鬆，對於輕度使用者來說是不錯的選擇。</li>
+        <li><strong>多模態整合好：</strong>能同時處理文字、圖片、影片，在 Google 的產品裡體驗很流暢。</li>
+      </ul>
+
+      <h3>劣勢</h3>
+      <ul>
+        <li><strong>中文能力稍遜：</strong>特別是繁體中文和粵語的理解，偶爾會出現奇怪的用詞或語法。這對需要生成面向客戶的中文內容的商戶來說是個問題。</li>
+        <li><strong>幻覺問題較多：</strong>在我們的測試中，Gemini 編造不存在的資訊的頻率高於 ChatGPT 和 Claude。這在商業場景中是個嚴重的風險。</li>
+        <li><strong>獨立使用體驗一般：</strong>Gemini 在 Google 生態內表現最好，但如果你不是重度 Google 用戶，獨立使用的體驗不如 ChatGPT 和 Claude。</li>
+        <li><strong>更新頻率波動大：</strong>Google 的 AI 產品策略經常調整，功能有時會突然改變或取消。</li>
+      </ul>
+
+      <h3>最適合場景</h3>
+      <p>Google Workspace 整合（Gmail、Docs、Sheets）、即時資訊搜尋、Google Ads 優化、影片內容分析（YouTube 整合）。</p>
+
+      <p><strong>澳門中小企評分：</strong><span class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</span>（3/5）</p>
+      <p><em>如果你是 Google 重度用戶，可以加一星。但澳門商戶主要用 WhatsApp 和 Facebook 溝通，Google 整合的優勢發揮不出來。中文能力和準確度也是減分項。</em></p>
+    </div>
+
+    <h2>Perplexity — AI 搜尋引擎的新標準</h2>
+
+    <div class="tool-card">
+      <h3>Perplexity 深度評測</h3>
+      <p><strong>開發商：</strong>Perplexity AI（美國）<br>
+      <strong>最新版本：</strong>Perplexity Pro（2026 年）<br>
+      <strong>官網：</strong>perplexity.ai</p>
+
+      <h3>優勢</h3>
+      <ul>
+        <li><strong>AI 搜尋引擎：</strong>Perplexity 不是傳統的聊天 AI，它是一個「會思考的搜尋引擎」。每個回答都附帶引用來源，你可以直接點擊查看原始資料。</li>
+        <li><strong>即時資訊最強：</strong>需要查最新的市場數據、競品動態、行業新聞？Perplexity 的回答比其他 AI 更新、更準確。</li>
+        <li><strong>引用來源透明：</strong>所有回答都標明資料來源，你可以自行驗證。這對商業決策來說非常重要。</li>
+        <li><strong>界面簡潔直覺：</strong>不需要學習複雜的提示詞技巧，像用 Google 一樣輸入問題就好。</li>
+      </ul>
+
+      <h3>劣勢</h3>
+      <ul>
+        <li><strong>不適合生成長文：</strong>Perplexity 的強項是搜尋和回答問題，如果你需要生成一篇 2000 字的文案，還是用 ChatGPT 或 Claude 比較好。</li>
+        <li><strong>中文搜尋結果偏少：</strong>搜尋結果以英文來源為主，中文（特別是澳門相關）的資料較少。</li>
+        <li><strong>Pro 版價格較高：</strong>Pro 版 US$20/月，和 ChatGPT Plus 同價，但功能更專一。</li>
+      </ul>
+
+      <h3>最適合場景</h3>
+      <p>市場調研、競品分析、行業趨勢追蹤、供應商調查、客戶需求分析。每次調研前先用 Perplexity 收集資料，再用 ChatGPT 或 Claude 做深度分析。</p>
+
+      <p><strong>澳門中小企評分：</strong><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>（4/5）</p>
+      <p><em>作為調研工具非常出色，附引用來源這點在商業場景中特別有價值。但它不能取代 ChatGPT/Claude 做文案生成，適合搭配使用。</em></p>
+    </div>
+
+    <h2>四大工具比較總表</h2>
+
+    <table>
+      <tr>
+        <th>比較項目</th>
+        <th>ChatGPT</th>
+        <th>Claude</th>
+        <th>Gemini</th>
+        <th>Perplexity</th>
+      </tr>
+      <tr>
+        <td><strong>免費版</strong></td>
+        <td>有（限量）</td>
+        <td>有（限量較嚴）</td>
+        <td>有（較寬鬆）</td>
+        <td>有（每天 5 次 Pro 搜尋）</td>
+      </tr>
+      <tr>
+        <td><strong>付費版月費</strong></td>
+        <td>US$20</td>
+        <td>US$20</td>
+        <td>US$20</td>
+        <td>US$20</td>
+      </tr>
+      <tr>
+        <td><strong>繁體中文能力</strong></td>
+        <td>優秀</td>
+        <td>良好</td>
+        <td>普通</td>
+        <td>良好</td>
+      </tr>
+      <tr>
+        <td><strong>粵語理解</strong></td>
+        <td>好</td>
+        <td>普通</td>
+        <td>差</td>
+        <td>普通</td>
+      </tr>
+      <tr>
+        <td><strong>文案生成</strong></td>
+        <td>最強</td>
+        <td>強</td>
+        <td>普通</td>
+        <td>弱</td>
+      </tr>
+      <tr>
+        <td><strong>長文分析</strong></td>
+        <td>普通</td>
+        <td>最強</td>
+        <td>普通</td>
+        <td>弱</td>
+      </tr>
+      <tr>
+        <td><strong>即時資訊</strong></td>
+        <td>有（搜尋功能）</td>
+        <td>無</td>
+        <td>強</td>
+        <td>最強</td>
+      </tr>
+      <tr>
+        <td><strong>圖片生成</strong></td>
+        <td>有（DALL-E）</td>
+        <td>無</td>
+        <td>有</td>
+        <td>無</td>
+      </tr>
+      <tr>
+        <td><strong>Plugin/擴展</strong></td>
+        <td>最多</td>
+        <td>少</td>
+        <td>中等</td>
+        <td>少</td>
+      </tr>
+      <tr>
+        <td><strong>準確度</strong></td>
+        <td>高</td>
+        <td>最高</td>
+        <td>中等</td>
+        <td>高（附引用）</td>
+      </tr>
+      <tr>
+        <td><strong>學習難度</strong></td>
+        <td>低</td>
+        <td>低</td>
+        <td>低</td>
+        <td>最低</td>
+      </tr>
+      <tr>
+        <td><strong>最佳用途</strong></td>
+        <td>文案 / 客服 / 翻譯</td>
+        <td>分析 / 策略 / 合約</td>
+        <td>Google 整合 / 搜尋</td>
+        <td>調研 / 競品分析</td>
+      </tr>
+    </table>
+
+    <h2>不同行業的推薦組合</h2>
+
+    <p>不同行業的需求不同，以下是山中田根據澳門市場特點整理的最佳 AI 工具組合：</p>
+
+    <div class="tool-card">
+      <h3>餐飲業：ChatGPT + Canva AI + n8n</h3>
+      <p><strong>月成本：MOP$0（全免費版）</strong></p>
+      <ul>
+        <li><strong>ChatGPT：</strong>每日菜單文案、社交媒體貼文、客戶回覆模板、中英葡三語翻譯</li>
+        <li><strong>Canva AI：</strong>餐牌設計、Instagram 限時動態、促銷海報、節日活動宣傳圖</li>
+        <li><strong>n8n：</strong>Facebook 訊息自動回覆（營業時間、菜單查詢）、每日營收自動記錄到 Google Sheets、低庫存自動提醒</li>
+      </ul>
+      <p><strong>為什麼這個組合：</strong>餐飲業最大的痛點是客戶訊息量大、社交媒體更新頻繁。ChatGPT 解決內容生成，Canva 解決視覺設計，n8n 把重複性的回覆和記錄工作自動化。三個工具互相配合，覆蓋了餐飲業 90% 的數碼化需求。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>零售業：Claude + Make + Perplexity</h3>
+      <p><strong>月成本：MOP$0-160（視需求）</strong></p>
+      <ul>
+        <li><strong>Claude：</strong>銷售數據分析、庫存預測、供應商合約審閱、商業報告撰寫</li>
+        <li><strong>Make：</strong>庫存自動監控、訂單自動通知、客戶回訪提醒、報表自動生成</li>
+        <li><strong>Perplexity：</strong>競品價格調研、新品趨勢追蹤、供應商背景調查</li>
+      </ul>
+      <p><strong>為什麼這個組合：</strong>零售業需要更多數據分析（哪些貨賣得好？什麼時候該補貨？）和市場調研（競爭對手在做什麼？）。Claude 的分析能力和 Perplexity 的調研能力是這個組合的核心。Make 比 n8n 更容易上手，適合沒有技術背景的零售店老闆。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>服務業（美容、健身、教育）：ChatGPT + n8n</h3>
+      <p><strong>月成本：MOP$0</strong></p>
+      <ul>
+        <li><strong>ChatGPT：</strong>預約確認訊息模板、課程介紹文案、客戶問卷設計、服務流程文件撰寫</li>
+        <li><strong>n8n：</strong>預約提醒自動發送、課後問卷自動發出、生日祝福自動發送、會員到期提醒</li>
+      </ul>
+      <p><strong>為什麼這個組合：</strong>服務業的核心是客戶關係管理。自動化的預約提醒和客戶關懷訊息能大幅提升客戶滿意度和回頭率。這個組合最精簡，兩個免費工具就能解決大部分需求。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>專業服務業（會計、法律、顧問）：Claude + ChatGPT + Perplexity</h3>
+      <p><strong>月成本：MOP$0-320（視需求）</strong></p>
+      <ul>
+        <li><strong>Claude：</strong>合約和法律文件分析、財務報表整理、客戶諮詢報告撰寫、案例研究</li>
+        <li><strong>ChatGPT：</strong>客戶溝通郵件、提案書初稿、會議紀錄、簡報製作</li>
+        <li><strong>Perplexity：</strong>法規更新追蹤、行業標準查詢、案例搜尋（附引用來源）</li>
+      </ul>
+      <p><strong>為什麼這個組合：</strong>專業服務業處理大量文件和研究工作。Claude 負責深度分析，ChatGPT 負責日常文書，Perplexity 負責調研。三者互補，大幅提升專業產出效率。</p>
+    </div>
+
+    <h2>山中田的建議：先從免費工具開始</h2>
+
+    <div class="highlight-box">
+      <strong>最重要的一點：</strong>不要一開始就花錢買付費版。所有四個 AI 工具都有免費版，先用 2-4 週的時間實際體驗，確認哪個對你的業務最有幫助，再考慮是否升級。很多中小企花了 US$20/月買了 ChatGPT Plus，結果每天只用來翻譯兩句話，其實免費版就夠了。
+    </div>
+
+    <h3>我們建議的體驗順序：</h3>
+    <ol>
+      <li><strong>第一步：</strong>先註冊 ChatGPT 免費版，用它處理日常文案和客戶回覆。這是最容易上手、最快見效的起點。</li>
+      <li><strong>第二步：</strong>如果你發現需要分析長文件或做複雜的數據分析，註冊 Claude 免費版試試。</li>
+      <li><strong>第三步：</strong>當你需要做市場調研或競品分析時，用 Perplexity 搜尋。</li>
+      <li><strong>第四步：</strong>確認 AI 對你有幫助後，考慮用 n8n 或 Make 建立自動化工作流。</li>
+      <li><strong>第五步：</strong>預約山中田的免費諮詢，讓我們根據你的實際使用情況，給出最佳的工具組合建議。</li>
+    </ol>
+
+    <p>記住：<strong>工具本身不重要，重要的是你用它解決了什麼問題。</strong>最好的 AI 工具是你真正會用、持續在用的那一個。</p>
+
+    <h3>山中田能幫你什麼？</h3>
+    <p>作為澳門唯一專注中小企 AI 教育的平台，山中田提供：</p>
+    <ul>
+      <li><strong>免費中文教學：</strong>每個工具的詳細使用教程，專為繁體中文用戶撰寫</li>
+      <li><strong>免費工作坊：</strong>每月舉辦線上工作坊，手把手帶你實操 AI 工具</li>
+      <li><strong>一對一諮詢：</strong>30 分鐘免費諮詢，分析你的業務需求，推薦最適合的 AI 方案</li>
+      <li><strong>預建模板：</strong>n8n 和 Make 的自動化工作流模板，下載即用</li>
+      <li><strong>社群支持：</strong>加入我們的 Telegram 社群，和其他澳門中小企主交流 AI 使用心得</li>
+    </ul>
+    <p>我們的所有教學資源都是免費的。因為我們相信，幫助澳門中小企提升效率，就是在幫助整個澳門的商業環境變得更好。</p>
+
+    <h2>常見問題</h2>
+
+    <details>
+      <summary>2026 年澳門中小企應該用 ChatGPT 還是 Claude？</summary>
+      <p>取決於你的主要用途。如果你需要日常文案生成、客服腳本、翻譯等通用文字工作，ChatGPT 的生態系更完整，Plugin 更多，是最安全的選擇。如果你需要分析長文件（如合約、商業報告）或做策略規劃，Claude 的長文理解和邏輯推理能力更強。兩者的免費版都能滿足基本需求，建議先都試用再決定。</p>
+    </details>
+
+    <details>
+      <summary>免費版的 AI 工具夠用嗎？</summary>
+      <p>對大多數澳門中小企來說，免費版已經能滿足 70-80% 的需求。ChatGPT 免費版每天可以進行多次對話，足夠處理日常文案和客服腳本。Claude 免費版適合偶爾的長文分析。Canva 免費版有豐富的模板。只有當你需要更高的使用量、更快的回應速度、或進階功能（如 ChatGPT 的圖片生成、Claude 的大量文件上傳）時，才需要升級到付費版。</p>
+    </details>
+
+    <details>
+      <summary>為什麼不推薦 Gemini 給澳門商戶？</summary>
+      <p>Gemini 並非不好，但對澳門中小企來說不是最優選擇。主要原因有三：一是中文能力（特別是繁體中文和粵語）相比 ChatGPT 和 Claude 稍弱；二是容易產生不準確的資訊（所謂的幻覺問題）；三是它的最大優勢——與 Google Workspace 的深度整合——對於主要使用 WhatsApp 和 Facebook 的澳門商戶幫助有限。如果你已經重度使用 Google Workspace，Gemini 仍然值得考慮。</p>
+    </details>
+
+    <details>
+      <summary>可以同時用多個 AI 工具嗎？</summary>
+      <p>不但可以，而且山中田建議這樣做。不同 AI 工具各有所長，搭配使用效果最好。例如餐飲業推薦 ChatGPT（文案）加 Canva AI（設計）加 n8n（自動化）的組合；零售業推薦 Claude（數據分析）加 Make（工作流）加 Perplexity（市場調研）的組合。免費版搭配使用完全不花錢，是最聰明的策略。</p>
+    </details>
+
+  </article>
+  <footer>
+    <p>&copy; 2026 山中田 Yamanakada · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+  </footer>
+</body>
+</html>

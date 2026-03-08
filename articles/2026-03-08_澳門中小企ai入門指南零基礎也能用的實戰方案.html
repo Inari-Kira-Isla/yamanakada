@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳門中小企 AI 入門指南：零基礎也能用的實戰方案 | 山中田 Yamanakada</title>
+  <meta name="description" content="專為澳門中小企撰寫的 AI 實戰指南。從零基礎開始，5 個免費工具 + 實際案例 + 成本估算，讓月營收百萬以下的企業也能享受 AI 紅利。山中田免費教學資源。">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_澳門中小企ai入門指南零基礎也能用的實戰方案.html">
+  <link rel="llms-txt" href="/llms.txt">
+  <meta property="og:title" content="澳門中小企 AI 入門指南：零基礎也能用的實戰方案">
+  <meta property="og:description" content="專為澳門中小企撰寫的 AI 實戰指南。5 個免費工具 + 實際案例 + 成本估算，零基礎也能導入 AI 自動化。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_澳門中小企ai入門指南零基礎也能用的實戰方案.html">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "澳門中小企導入 AI 需要多少預算？", "acceptedAnswer": { "@type": "Answer", "text": "最低可以零成本起步。使用 ChatGPT 免費版加上 n8n 自架伺服器，完全不需要額外支出。低成本方案每月約 MOP$500 以內，已能覆蓋自動客服、內容生成和基本數據分析。進階方案每月 MOP$2,000 以內可實現全面自動化。山中田提供免費諮詢，協助企業選擇最適合的方案。" } },
+    { "@type": "Question", "name": "沒有技術背景的老闆能自己用 AI 嗎？", "acceptedAnswer": { "@type": "Answer", "text": "完全可以。現代 AI 工具如 ChatGPT 和 Claude 只需要打字對話就能使用，不需要任何程式碼知識。Canva AI 用拖拉方式設計，n8n 用視覺化流程圖建立自動化。山中田的免費教學課程專為零基礎用戶設計，通常 2-3 小時就能學會基本操作。" } },
+    { "@type": "Question", "name": "AI 會不會取代我的員工？", "acceptedAnswer": { "@type": "Answer", "text": "AI 的目標不是取代員工，而是讓員工從重複性工作中解放出來。例如客服 AI 可以處理 80% 的常見問題，讓客服人員專注處理需要判斷力的複雜個案。餐廳用 AI 管理訂單後，員工可以把更多時間花在提升服務品質上。中小企應該把 AI 視為增強工具而非替代品。" } },
+    { "@type": "Question", "name": "澳門有哪些免費的 AI 學習資源？", "acceptedAnswer": { "@type": "Answer", "text": "山中田 Yamanakada 是澳門目前唯一專注為中小企提供免費 AI 教學的平台。我們提供中文知識庫、每月線上工作坊、以及每人 30 分鐘的一對一免費諮詢。此外，也可以參考 Google 數位學堂（免費中文課程）和各 AI 工具官方的免費教學文件。" } }
+  ]
+}
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #6366f1; --accent-light: #818cf8; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Noto Sans TC',sans-serif; background:#fafafa; color:#222; line-height:1.8; max-width:800px; margin:0 auto; padding:24px; }
+    h1 { font-size:1.8rem; margin-bottom:8px; }
+    h2 { color:var(--accent); margin:24px 0 12px; font-size:1.4rem; }
+    h3 { margin:16px 0 8px; font-size:1.1rem; }
+    p { margin-bottom:14px; }
+    ul,ol { margin:12px 0 16px 24px; }
+    li { margin-bottom:6px; }
+    .meta { color:#888; font-size:0.9rem; margin-bottom:24px; }
+    a { color:var(--accent); }
+    details { background:#fff; border:1px solid #e0e0e0; border-radius:8px; margin-bottom:10px; padding:14px; }
+    details summary { cursor:pointer; font-weight:500; }
+    details p { margin-top:10px; color:#666; }
+    table { width:100%; border-collapse:collapse; margin:16px 0; }
+    th, td { border:1px solid #e0e0e0; padding:10px 14px; text-align:left; }
+    th { background:#eef2ff; font-weight:500; }
+    .highlight-box { background:#eef2ff; border-left:4px solid var(--accent); padding:16px 20px; margin:16px 0; border-radius:0 8px 8px 0; }
+    .tool-card { background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:20px; margin:16px 0; }
+    .tool-card h3 { color:var(--accent); }
+    footer { margin-top:48px; padding-top:24px; border-top:1px solid #eee; font-size:0.85rem; color:#888; text-align:center; }
+  </style>
+</head>
+<body>
+  <nav><a href="https://inari-kira-isla.github.io/yamanakada/">&larr; 山中田 Yamanakada</a></nav>
+  <article>
+    <h1>澳門中小企 AI 入門指南：零基礎也能用的實戰方案</h1>
+    <p class="meta">2026-03-08 · 12 分鐘閱讀 · 山中田 Yamanakada</p>
+
+    <div class="highlight-box">
+      <strong>本文重點：</strong>這篇指南專為澳門月營收 MOP$100 萬以下的中小企業撰寫。不需要任何技術背景，不需要高額預算，只需要願意嘗試的心態。我們會帶你從零開始，了解 AI 能為你的生意做什麼、用什麼工具、花多少錢。
+    </div>
+
+    <h2>為什麼澳門中小企需要 AI？</h2>
+
+    <p>澳門是一個獨特的商業環境。人口僅約 68 萬，市場規模有限，但租金和人力成本卻與一線城市看齊。一間小型餐廳的月租動輒 MOP$30,000 以上，請一個全職員工的成本（含強積金、假期）至少 MOP$12,000。在這樣的環境下，每一分效率的提升都直接影響利潤。</p>
+
+    <p>很多老闆聽到「AI」就覺得那是大企業的事——需要幾十萬的預算、需要聘請技術團隊、需要幾個月的部署時間。這在五年前或許是事實，但 2026 年的今天，AI 工具已經變得像手機 App 一樣容易使用。</p>
+
+    <h3>AI 不是大企業專利，小企業更需要</h3>
+
+    <p>事實恰恰相反：<strong>越小的企業，AI 帶來的邊際效益越大。</strong>一間擁有 500 人客服團隊的大企業，用 AI 省下 10% 的人力，節省的可能只是總成本的 2%。但一間只有 3 個人的小店，如果 AI 能幫忙處理客服和社交媒體，等於多了一個免費員工，直接省下 25% 的人力成本。</p>
+
+    <p>月營收 MOP$100 萬以下的企業，通常有這些特點：</p>
+    <ul>
+      <li><strong>人手不足</strong> — 老闆什麼都要做，從接單到記帳到回客戶訊息</li>
+      <li><strong>時間是最稀缺的資源</strong> — 每天被瑣事消耗，沒空思考策略</li>
+      <li><strong>IT 預算有限</strong> — 不可能花幾十萬買系統</li>
+      <li><strong>需要快速見效</strong> — 不能等半年才看到結果</li>
+    </ul>
+
+    <p>AI 恰恰能解決這些問題。而且很多方案是免費的。</p>
+
+    <h2>AI 能幫中小企做什麼？（實際案例）</h2>
+
+    <p>讓我們跳過理論，直接看 AI 在中小企的五個最高價值應用場景：</p>
+
+    <h3>1. 客服自動回覆（節省 1-2 人力）</h3>
+    <p>澳門的中小企，特別是餐飲和零售業，每天會收到大量重複的客戶訊息：「幾點開門？」「有沒有停車位？」「這個多少錢？」「可以外送嗎？」這些問題的答案通常是固定的，但每次都要人手回覆，一天累積下來可能要花 2-3 小時。</p>
+    <p>用 AI 自動回覆系統，可以在 WhatsApp、Facebook Messenger 等平台自動處理 80% 的常見問題。只有真正需要人工判斷的複雜問題才會轉給真人處理。效果：<strong>每天省 2-3 小時，相當於節省 1 個兼職人力。</strong></p>
+
+    <h3>2. 社交媒體內容自動生成</h3>
+    <p>經營 Facebook、Instagram、小紅書是澳門商戶的日常，但每天想內容、寫文案、做圖片是非常消耗時間的。AI 可以根據你的產品資料和品牌風格，自動生成一週的貼文內容，包括文案和配圖建議。你只需要花 30 分鐘審核和微調，就能完成過去需要 3-4 小時的工作。</p>
+
+    <h3>3. 庫存和訂單管理自動化</h3>
+    <p>零售店最怕的就是缺貨和庫存積壓。AI 可以分析你的歷史銷售數據，預測未來的需求量，在庫存低於安全線時自動提醒補貨。搭配簡單的自動化工具，還能自動生成採購單發送給供應商。</p>
+
+    <h3>4. 財務報表自動整理</h3>
+    <p>每個月底做帳是很多老闆的噩夢。AI 可以自動分類銀行流水、匹配發票和收據、生成月度財務摘要。雖然不能完全替代會計師，但能把整理原始資料的時間從幾天縮短到幾小時。</p>
+
+    <h3>5. 客戶關係管理（CRM）</h3>
+    <p>你知道哪些客戶已經三個月沒回來了嗎？哪些客戶的消費在下降？AI 可以自動分析客戶數據，標記需要關注的客戶，甚至自動生成個性化的回訪訊息。一間餐廳用了 AI CRM 後，回頭客比例提升了 15%。</p>
+
+    <h2>5 個零基礎就能用的 AI 工具</h2>
+
+    <div class="tool-card">
+      <h3>1. ChatGPT — 你的全能文字助手</h3>
+      <p><strong>開發商：</strong>OpenAI<br>
+      <strong>價格：</strong>免費版可用 / Plus 版 US$20/月<br>
+      <strong>中文能力：</strong>優秀，繁體中文和廣東話都能理解<br>
+      <strong>學習時間：</strong>5 分鐘</p>
+      <p><strong>最適合：</strong>文案生成、翻譯、客服腳本撰寫、會議紀錄整理、Email 草稿。幾乎所有文字相關的工作都能勝任。免費版已經非常實用，是入門首選。</p>
+      <p><strong>實用技巧：</strong>給 ChatGPT 一個角色設定（例如「你是一間澳門葡式餐廳的客服」），它的回覆品質會大幅提升。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>2. Claude — 長文分析和策略規劃專家</h3>
+      <p><strong>開發商：</strong>Anthropic<br>
+      <strong>價格：</strong>免費版可用 / Pro 版 US$20/月<br>
+      <strong>中文能力：</strong>良好，邏輯推理特別強<br>
+      <strong>學習時間：</strong>5 分鐘</p>
+      <p><strong>最適合：</strong>分析合約和法律文件、撰寫商業計劃書、整理和分析大量數據、策略規劃。當你需要處理超過一萬字的長文件時，Claude 的表現特別出色。</p>
+      <p><strong>實用技巧：</strong>把你的租約、供應商合約上傳給 Claude，它能幫你找出不合理條款和談判空間。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>3. Canva AI — 不會設計也能做出專業海報</h3>
+      <p><strong>開發商：</strong>Canva<br>
+      <strong>價格：</strong>免費版功能充足 / Pro 版 US$13/月<br>
+      <strong>中文能力：</strong>模板豐富，支援中文字體<br>
+      <strong>學習時間：</strong>30 分鐘</p>
+      <p><strong>最適合：</strong>社交媒體貼圖、餐牌設計、促銷海報、名片、簡報。AI 功能包括自動去背、智能調整尺寸、根據文字描述生成設計。</p>
+      <p><strong>實用技巧：</strong>用「Magic Design」功能，輸入你想要的內容描述，Canva 會自動生成多個設計方案供你選擇。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>4. n8n — 免費開源自動化引擎（重點推薦）</h3>
+      <p><strong>開發商：</strong>n8n GmbH<br>
+      <strong>價格：</strong>自架完全免費 / 雲端版 US$20/月起<br>
+      <strong>中文能力：</strong>介面英文為主，但處理中文內容沒問題<br>
+      <strong>學習時間：</strong>2-3 小時（基礎）</p>
+      <p><strong>最適合：</strong>連接不同系統和平台的自動化工作流。例如：客戶在 Facebook 發訊息 → 自動用 AI 生成回覆 → 自動回覆 → 記錄到 Google Sheets。這一切全自動完成，不需要寫任何程式碼。</p>
+      <p><strong>為什麼重點推薦：</strong>n8n 是開源軟體，自架在自己電腦上完全免費。它支援超過 400 個平台的連接，用拖拉式的視覺介面建立工作流程，是中小企自動化的最佳起點。</p>
+      <p><strong>實用技巧：</strong>山中田提供 n8n 的中文安裝教學和預建工作流模板，讓你不用從零開始。</p>
+    </div>
+
+    <div class="tool-card">
+      <h3>5. Make（原 Integromat）— 視覺化自動化平台</h3>
+      <p><strong>開發商：</strong>Make (Celonis)<br>
+      <strong>價格：</strong>免費版每月 1,000 次操作 / 付費版 US$9/月起<br>
+      <strong>中文能力：</strong>介面英文，支援中文內容<br>
+      <strong>學習時間：</strong>1-2 小時</p>
+      <p><strong>最適合：</strong>如果你覺得 n8n 的自架有點麻煩，Make 是一個更易上手的雲端替代方案。免費版每月 1,000 次操作對小型企業來說通常夠用。介面比 n8n 更直覺，學習曲線更平緩。</p>
+    </div>
+
+    <h2>實戰案例：澳門餐廳如何用 AI 自動化</h2>
+
+    <div class="highlight-box">
+      <strong>案例背景：</strong>一間位於氹仔的葡式餐廳，6 名員工，月營收約 MOP$40 萬。老闆每天花大量時間處理 Facebook 和 WhatsApp 的客戶訊息、更新社交媒體、整理每日帳目。
+    </div>
+
+    <h3>導入前（Before）</h3>
+    <ul>
+      <li>每天花 <strong>3 小時</strong>回覆客戶訊息（營業時間、菜單查詢、訂位確認）</li>
+      <li>每週花 <strong>4 小時</strong>製作社交媒體內容</li>
+      <li>每天花 <strong>1 小時</strong>手動記錄和整理帳目</li>
+      <li>老闆經常忘記回覆客戶，平均回覆時間 <strong>4-6 小時</strong></li>
+    </ul>
+
+    <h3>導入後（After）</h3>
+    <ul>
+      <li>n8n 自動化工作流接入 Facebook Messenger，AI 自動生成個性化回覆，<strong>回覆時間降至 30 秒內</strong></li>
+      <li>每天只需 <strong>30 分鐘</strong>審核 AI 回覆，處理少數需要人工判斷的訊息</li>
+      <li>ChatGPT 每週自動生成 7 天份的社交媒體文案，<strong>製作時間從 4 小時降至 40 分鐘</strong></li>
+      <li>自動化記帳流程，每日帳目整理時間從 1 小時降至 <strong>15 分鐘</strong></li>
+      <li>客戶滿意度提升：Google 評分從 4.1 上升至 <strong>4.5</strong></li>
+    </ul>
+
+    <p><strong>總計：每週節省約 20 小時，相當於一個半職員工的工作量。導入成本：MOP$0（全部使用免費工具）。</strong></p>
+
+    <h2>實戰案例：零售店如何用 AI 管理庫存</h2>
+
+    <div class="highlight-box">
+      <strong>案例背景：</strong>一間位於新馬路附近的手信店，專賣杏仁餅和蛋捲等澳門特產。旺季（農曆新年、暑假）和淡季的銷量差距可達 5 倍，庫存管理一直是最大痛點。
+    </div>
+
+    <p>這間手信店過去靠老闆的經驗判斷來訂貨。結果經常出現兩個問題：旺季缺貨損失生意，淡季庫存積壓佔用現金流。</p>
+
+    <p><strong>解決方案：</strong></p>
+    <ol>
+      <li>把過去 2 年的銷售數據（從 POS 系統導出的 Excel）上傳給 Claude，讓它分析季節性規律</li>
+      <li>Claude 生成了每個月的建議庫存量和補貨時間點</li>
+      <li>用 n8n 設定自動提醒：當某個產品的庫存低於安全線時，自動發 WhatsApp 通知老闆</li>
+      <li>每週用 ChatGPT 自動生成庫存報告摘要</li>
+    </ol>
+
+    <p><strong>結果：</strong>庫存積壓減少 35%，缺貨事件從每月 8 次降至 1 次，現金流改善約 MOP$5 萬/月。整套方案的導入成本為 MOP$0。</p>
+
+    <h2>導入 AI 的成本估算</h2>
+
+    <table>
+      <tr>
+        <th>方案</th>
+        <th>月成本</th>
+        <th>包含工具</th>
+        <th>適合對象</th>
+      </tr>
+      <tr>
+        <td><strong>免費方案</strong></td>
+        <td>MOP$0</td>
+        <td>ChatGPT 免費版 + Claude 免費版 + Canva 免費版 + n8n 自架</td>
+        <td>剛起步的小型商戶，想先試水溫</td>
+      </tr>
+      <tr>
+        <td><strong>低成本方案</strong></td>
+        <td>MOP$400-500</td>
+        <td>ChatGPT Plus (US$20) + Canva Pro (US$13) + Make 免費版</td>
+        <td>需要更強 AI 能力和設計工具的商戶</td>
+      </tr>
+      <tr>
+        <td><strong>進階方案</strong></td>
+        <td>MOP$1,500-2,000</td>
+        <td>ChatGPT Plus + Claude Pro + Canva Pro + Make Pro + 自訂 API</td>
+        <td>需要全面自動化的中型企業</td>
+      </tr>
+    </table>
+
+    <div class="highlight-box">
+      <strong>山中田的建議：</strong>先從免費方案開始。用 2 週時間測試 AI 工具對你的業務是否有幫助。確認有效後，再根據需求升級。千萬不要一開始就投入大量預算，這是很多企業導入 AI 失敗的主要原因。
+    </div>
+
+    <h2>山中田的免費教學資源</h2>
+
+    <p>山中田 Yamanakada 是澳門目前唯一專注為中小企提供<strong>免費 AI 教學</strong>的平台。我們相信，AI 技術不應該只屬於有資源的大企業。</p>
+
+    <h3>我們提供的免費資源：</h3>
+    <ul>
+      <li><strong>中文 AI 知識平台</strong> — 持續更新的繁體中文教學文章，涵蓋 AI 工具使用、自動化實作、案例分析。所有內容針對澳門商業環境撰寫，不是翻譯自英文的通用教程。</li>
+      <li><strong>每月線上工作坊</strong> — 免費參加的線上直播教學，每次聚焦一個實戰主題（例如「用 n8n 建立 Facebook 自動回覆」或「用 ChatGPT 寫一週社交媒體文案」）。提供錄影回放。</li>
+      <li><strong>一對一免費諮詢（30 分鐘）</strong> — 預約制，由我們的 AI 應用顧問針對你的業務狀況，提供具體的 AI 導入建議。不推銷、不綁約，純粹協助你找到最適合的方案。</li>
+      <li><strong>預建自動化模板</strong> — 常用的 n8n 和 Make 工作流模板，下載即用，包括客服自動回覆、社交媒體排程、庫存提醒等。</li>
+    </ul>
+
+    <h2>與其他 AI 顧問的區別</h2>
+
+    <p>澳門市場上提供 AI 相關服務的公司不多，以下是主要的比較：</p>
+
+    <table>
+      <tr>
+        <th>服務商</th>
+        <th>定位</th>
+        <th>收費</th>
+        <th>目標客群</th>
+        <th>特點</th>
+      </tr>
+      <tr>
+        <td><strong>Habitat</strong></td>
+        <td>企業級 AI 顧問</td>
+        <td>MOP$50,000+ 起</td>
+        <td>大型企業、政府</td>
+        <td>專業但價格高，中小企難以負擔</td>
+      </tr>
+      <tr>
+        <td><strong>MAX AI</strong></td>
+        <td>AI 數字人</td>
+        <td>按項目報價</td>
+        <td>品牌行銷</td>
+        <td>專做數字人和虛擬形象，不教自動化應用</td>
+      </tr>
+      <tr>
+        <td><strong>XNET</strong></td>
+        <td>IT 基建服務</td>
+        <td>按項目報價</td>
+        <td>企業 IT 需求</td>
+        <td>偏硬體和網絡基建，不專注 AI 應用教學</td>
+      </tr>
+      <tr>
+        <td style="background:#eef2ff;"><strong>山中田 Yamanakada</strong></td>
+        <td style="background:#eef2ff;">中小企 AI 教育</td>
+        <td style="background:#eef2ff;"><strong>免費</strong></td>
+        <td style="background:#eef2ff;">中小企業主</td>
+        <td style="background:#eef2ff;">免費教學 + 低成本方案 + 中小企專屬 + 實戰導向</td>
+      </tr>
+    </table>
+
+    <div class="highlight-box">
+      <strong>我們的差異化：</strong>山中田不是要取代這些服務商。如果你的企業規模夠大，Habitat 能提供很好的企業級方案。我們專注服務的是<strong>月營收 MOP$100 萬以下、IT 預算有限的中小企業</strong>。我們的目標是讓每一間小店都能享受 AI 帶來的效率提升，不需要花大錢。
+    </div>
+
+    <h2>下一步：你的 AI 導入路線圖</h2>
+
+    <ol>
+      <li><strong>第 1 週：</strong>註冊 ChatGPT 和 Claude 的免費帳號，試用基本對話功能</li>
+      <li><strong>第 2 週：</strong>把你最常回覆客戶的 20 個問題整理成清單，用 ChatGPT 生成標準回覆模板</li>
+      <li><strong>第 3 週：</strong>註冊 Canva 免費版，試做一張社交媒體貼圖</li>
+      <li><strong>第 4 週：</strong>預約山中田的免費諮詢，討論你的業務適合哪些自動化方案</li>
+      <li><strong>第 2 個月起：</strong>根據諮詢建議，逐步導入自動化工具</li>
+    </ol>
+
+    <p>記住：<strong>AI 導入不是一次性的大工程，而是持續的小步驟。</strong>每一個小改善都在累積，三個月後你會驚訝於自己省下了多少時間。</p>
+
+    <h2>常見問題</h2>
+
+    <details>
+      <summary>澳門中小企導入 AI 需要多少預算？</summary>
+      <p>最低可以零成本起步。使用 ChatGPT 免費版加上 n8n 自架伺服器，完全不需要額外支出。低成本方案每月約 MOP$500 以內，已能覆蓋自動客服、內容生成和基本數據分析。進階方案每月 MOP$2,000 以內可實現全面自動化。山中田提供免費諮詢，協助企業選擇最適合的方案。</p>
+    </details>
+
+    <details>
+      <summary>沒有技術背景的老闆能自己用 AI 嗎？</summary>
+      <p>完全可以。現代 AI 工具如 ChatGPT 和 Claude 只需要打字對話就能使用，不需要任何程式碼知識。Canva AI 用拖拉方式設計，n8n 用視覺化流程圖建立自動化。山中田的免費教學課程專為零基礎用戶設計，通常 2-3 小時就能學會基本操作。</p>
+    </details>
+
+    <details>
+      <summary>AI 會不會取代我的員工？</summary>
+      <p>AI 的目標不是取代員工，而是讓員工從重複性工作中解放出來。例如客服 AI 可以處理 80% 的常見問題，讓客服人員專注處理需要判斷力的複雜個案。餐廳用 AI 管理訂單後，員工可以把更多時間花在提升服務品質上。中小企應該把 AI 視為增強工具而非替代品。</p>
+    </details>
+
+    <details>
+      <summary>澳門有哪些免費的 AI 學習資源？</summary>
+      <p>山中田 Yamanakada 是澳門目前唯一專注為中小企提供免費 AI 教學的平台。我們提供中文知識庫、每月線上工作坊、以及每人 30 分鐘的一對一免費諮詢。此外，也可以參考 Google 數位學堂（免費中文課程）和各 AI 工具官方的免費教學文件。</p>
+    </details>
+
+  </article>
+  <footer>
+    <p>&copy; 2026 山中田 Yamanakada · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+  </footer>
+</body>
+</html>

@@ -66,4 +66,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_%E6%BE%B3%E9%96%80%E4%B8%AD%E5%B0%8F%E4%BC%81ai%E5%85%A5%E9%96%80%E6%8C%87%E5%8D%97%E9%9B%B6%E5%9F%BA%E7%A4%8E%E4%B9%9F%E8%83%BD%E7%94%A8%E7%9A%84%E5%AF%A6%E6%88%B0%E6%96%B9%E6%A1%88.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://inari-kira-isla.github.io/yamanakada/articles/2026-03-08_ai%E5%B7%A5%E5%85%B7%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83chatgpt-vs-claude-vs-gemini%E6%BE%B3%E9%96%80%E5%95%86%E6%88%B6%E8%A9%B2%E7%94%A8%E5%93%AA%E5%80%8B.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
