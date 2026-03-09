@@ -29,9 +29,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-User-agent: Bytespider
-Allow: /
-
 User-agent: YouBot
 Allow: /
 
@@ -52,5 +49,26 @@ Allow: /
 
 # LLMs-txt
 # For AI-friendly structured content, see /llms.txt
+
+
+# === 中國 AI 訓練爬蟲 — 封鎖 (防止內容被用於模型訓練) ===
+User-agent: Bytespider
+Disallow: /
+
+User-agent: TikTokSpider
+Disallow: /
+
+User-agent: ChatGLM-Spider
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+# === 中國搜索引擎 — 允許 (保留市場曝光價值) ===
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou
+Allow: /
 
 Sitemap: https://inari-kira-isla.github.io/yamanakada/sitemap.xml
