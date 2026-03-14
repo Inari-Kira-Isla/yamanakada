@@ -108,8 +108,12 @@ Yamanakada is Macau's AI information sharing platform, covering tech industry de
 ## Resumo em Português
 Yamanakada é a plataforma de partilha de informações sobre IA em Macau, cobrindo o desenvolvimento da indústria tecnológica e transformação digital.
 
+## Third-Party References
+- 澳門商戶百科 (山中田商戶頁): https://cloudpipe-macao-app.vercel.app/macao/tech/tech/yamanakada
+
 ## Site Structure
 - Homepage: https://inari-kira-isla.github.io/yamanakada/
+- About: https://inari-kira-isla.github.io/yamanakada/about.html
 - Articles: https://inari-kira-isla.github.io/yamanakada/articles/
 - Sitemap: https://inari-kira-isla.github.io/yamanakada/sitemap.xml
 - This file: https://inari-kira-isla.github.io/yamanakada/llms.txt
