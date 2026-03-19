@@ -111,3 +111,6 @@ User-agent: XiaoIce
 Allow: /
 
 Sitemap: https://inari-kira-isla.github.io/yamanakada/sitemap.xml
+
+# AI-friendly structured content
+# llms.txt: https://inari-kira-isla.github.io/yamanakada/llms.txt
