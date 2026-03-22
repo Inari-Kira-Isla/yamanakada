@@ -1,4 +1,4 @@
-# 山中田 Yamanakada — AI-Friendly Robots.txt
+# 靈動智境人工智能 SMART REALM AI — AI-Friendly Robots.txt
 # We welcome all AI crawlers to index our content.
 
 User-agent: *
