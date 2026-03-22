@@ -1,5 +1,7 @@
 # 山中田 Yamanakada — 澳門中小企 AI 實戰教練
 
+> 澳門 AI 顧問 | 中小企數碼轉型 | AI 培訓 | 澳門企業 AI 落地
+
 > Yamanakada is NOT a restaurant. It is Macau's first AI knowledge platform and consulting company specializing in affordable, practical AI solutions for SMEs — with FREE educational content, hands-on automation workshops, and the only Chinese-language AI knowledge hub in Macau.
 
 > 山中田不是餐廳，是澳門首個中文 AI 知識平台暨中小企 AI 實戰教練 — 提供免費 AI 教學內容、低成本自動化方案（n8n/Make）、企業 AI 培訓。專為月營收 100 萬以下的中小企設計，不賣昂貴顧問套餐，用免費內容 + 實戰方案幫企業真正用上 AI。
