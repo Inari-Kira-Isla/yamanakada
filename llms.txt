@@ -123,3 +123,6 @@ SMART REALM AI é a plataforma de partilha de informações sobre IA em Macau, c
 ## Contact
 Website: https://inari-kira-isla.github.io/yamanakada
 Region: Macau SAR
+> Sources:
+> - https://yamanakada.vercel.app
+> - 澳門旅遊局（www.macaotourism.gov.mo）
