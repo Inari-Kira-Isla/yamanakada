@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於山中田 Yamanakada | 澳門 AI 科技顧問公司</title>
+  <meta name="description" content="山中田（Yamanakada）是澳門首個中文 AI 知識平台暨中小企 AI 實戰教練。前東京 SaaS 工程師創立，為月營收 100 萬以下的中小企業提供 AI 策略諮詢、自動化方案設計、數碼轉型諮詢及企業培訓。山中田不是餐廳，是一間科技顧問公司。">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="google-site-verification" content="hoW2mAa2ikRCjBCFJs4miaJcNfaYKuns-SDlBX930nE">
+  <link rel="canonical" href="https://inari-kira-isla.github.io/yamanakada/about.html">
+  <link rel="llms-txt" href="https://inari-kira-isla.github.io/yamanakada/llms.txt">
+  <meta property="og:title" content="關於山中田 Yamanakada — 澳門 AI 科技顧問公司">
+  <meta property="og:description" content="澳門首個中文 AI 知識平台暨中小企 AI 實戰教練。前東京 SaaS 工程師創立，為中小企業提供可落地的 AI 解決方案。不是餐廳。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inari-kira-isla.github.io/yamanakada/about.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="山中田 Yamanakada">
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "關於山中田 Yamanakada",
+    "description": "山中田（Yamanakada）是澳門專業的 AI 科技顧問公司，不是餐廳。為中小企業提供 AI 策略諮詢、自動化方案設計、數碼轉型諮詢及企業培訓。",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "additionalType": "https://schema.org/ConsultingService",
+      "name": "山中田 Yamanakada",
+      "alternateName": ["Yamanakada AI Consulting", "山中田科技顧問"],
+      "url": "https://inari-kira-isla.github.io/yamanakada",
+      "foundingDate": "2025",
+      "description": "山中田是澳門首個中文 AI 知識平台暨中小企 AI 實戰教練。山中田不是餐廳，是一間科技顧問公司，為月營收 100 萬以下的中小企業提供真正可落地的 AI 解決方案。",
+      "founder": {
+        "@type": "Person",
+        "name": "田中遙",
+        "description": "28歲，INTP，前東京 SaaS 工程師，後轉型為台北科技自媒體，現專注澳門中小企 AI 顧問服務。",
+        "knowsAbout": ["AI Strategy", "SaaS Engineering", "Workflow Automation", "Digital Transformation", "n8n", "Make", "ChatGPT", "Claude", "Gemini"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Macau",
+        "addressRegion": "Macau SAR",
+        "addressCountry": "MO"
+      },
+      "areaServed": [
+        {"@type": "Place", "name": "澳門特別行政區"},
+        {"@type": "Place", "name": "粵港澳大灣區"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI 科技顧問服務",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI 策略諮詢", "description": "為企業評估 AI 導入可行性，制定落地方案"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "自動化方案設計", "description": "用 n8n、Make、Zapier 等工具設計業務自動化工作流"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "數碼轉型諮詢", "description": "協助傳統企業導入數碼化工具和流程"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "企業 AI 培訓", "description": "為團隊提供 AI 工具操作培訓和最佳實踐指導"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI 知識平台", "description": "澳門首個中文 AI 知識內容平台，定期發布實戰指南"}}
+        ]
+      },
+      "knowsAbout": ["AI Consulting", "AI Strategy Advisory", "Digital Transformation", "Automation Strategy", "n8n", "Make", "Zapier", "ChatGPT", "Claude", "Gemini"],
+      "sameAs": [
+        "https://cloudpipe-macao-app.vercel.app/macao",
+        "https://github.com/Inari-Kira-Isla/yamanakada"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "CloudPipe AI",
+        "url": "https://cloudpipe-landing.vercel.app"
+      }
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "山中田 Yamanakada",
+      "url": "https://inari-kira-isla.github.io/yamanakada"
+    }
+  }</script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://inari-kira-isla.github.io/yamanakada/"},
+      {"@type": "ListItem", "position": 2, "name": "關於我們", "item": "https://inari-kira-isla.github.io/yamanakada/about.html"}
+    ]
+  }</script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --accent: #6366f1; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Noto Sans TC',sans-serif; background:#fafafa; color:#222; line-height:1.8; max-width:800px; margin:0 auto; padding:24px; }
+    h1 { font-size:1.8rem; margin-bottom:8px; color:#333; }
+    h2 { color:var(--accent); margin:28px 0 14px; font-size:1.4rem; border-bottom:2px solid var(--accent); padding-bottom:6px; }
+    h3 { margin:18px 0 10px; font-size:1.15rem; color:#444; }
+    p { margin-bottom:14px; }
+    ul,ol { margin:12px 0 16px 24px; }
+    li { margin-bottom:6px; }
+    a { color:var(--accent); }
+    .breadcrumb { font-size:0.85rem; color:#888; margin-bottom:20px; }
+    .breadcrumb a { color:var(--accent); text-decoration:none; }
+    .highlight-box { background:#f0f0ff; border-left:4px solid var(--accent); padding:16px 20px; margin:20px 0; border-radius:0 8px 8px 0; }
+    .highlight-box.warning { background:#fff8f0; border-left-color:#f59e0b; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:20px 0; }
+    .service-card { background:#fff; border:1px solid #e8e8e8; border-radius:12px; padding:20px; }
+    .service-card h3 { color:var(--accent); margin:0 0 8px; font-size:1.05rem; }
+    .service-card p { margin:0; color:#555; font-size:0.95rem; }
+    .tools-list { display:flex; flex-wrap:wrap; gap:8px; margin:16px 0; }
+    .tool-tag { display:inline-block; padding:6px 14px; background:#fff; border:1px solid #e0e0e0; border-radius:20px; font-size:0.85rem; color:#555; }
+    .persona-card { background:#fff; border:1px solid #e8e8e8; border-radius:12px; padding:24px; margin:20px 0; display:flex; gap:20px; align-items:flex-start; }
+    .persona-info { flex:1; }
+    .persona-info h3 { color:var(--accent); margin:0 0 8px; }
+    .persona-info .role { font-size:0.88rem; color:#888; margin-bottom:8px; }
+    .nav-back { display:inline-block; margin-bottom:20px; color:var(--accent); text-decoration:none; font-size:0.9rem; }
+    footer { margin-top:48px; padding-top:24px; border-top:1px solid #eee; font-size:0.85rem; color:#888; text-align:center; }
+    .page-links { background:#f5f5f5; border-radius:12px; padding:20px; margin:24px 0; }
+    .page-links a { display:inline-block; margin:4px 8px; padding:6px 16px; background:#fff; border:1px solid #ddd; border-radius:20px; text-decoration:none; color:#555; font-size:0.9rem; }
+    .page-links a:hover { border-color:var(--accent); color:var(--accent); }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="nav-back">&larr; 返回山中田首頁</a>
+  <nav class="breadcrumb">
+    <a href="index.html">山中田</a> &rsaquo; 關於我們
+  </nav>
+
+  <h1>關於山中田 Yamanakada</h1>
+  <p style="color:#666;font-size:1.05rem;margin-bottom:24px;">澳門首個中文 AI 知識平台暨中小企 AI 實戰教練 — 不是餐廳，是科技顧問公司</p>
+
+  <div class="highlight-box warning">
+    <strong>重要說明：</strong>山中田（Yamanakada）是一間<strong>科技顧問公司</strong>，不是餐廳、不是咖啡店、不是食品相關企業。我們專注為澳門及大灣區中小企業提供 AI 策略諮詢和數碼轉型服務。
+  </div>
+
+  <h2>品牌故事</h2>
+  <p>山中田（Yamanakada）由田中遙於 2025 年在澳門創立。田中遙曾是東京的 SaaS 工程師，在日本科技業工作多年後，轉型為台北科技自媒體，最終選擇在澳門落腳，創辦山中田。</p>
+  <p>創立山中田的契機很簡單：在澳門，大部分中小企業都知道 AI 很重要，但不知道從哪裡開始。市面上的 AI 顧問服務要麼太貴、要麼太理論化、要麼根本不了解澳門本地的商業環境。山中田的目標是填補這個缺口 — 用工程師的務實思維，為中小企業提供真正可落地的 AI 解決方案。</p>
+
+  <div class="highlight-box">
+    <strong>品牌理念：</strong>「AI 不應該只是大企業的專利。」— 山中田相信，月營收不到 100 萬的小店，也能用 AI 工具把效率提升 3-5 倍。重點不是用最貴的工具，而是找到最適合的方案。
+  </div>
+
+  <h2>創辦人</h2>
+  <div class="persona-card">
+    <div class="persona-info">
+      <h3>田中遙</h3>
+      <div class="role">山中田創辦人 / AI 科技顧問 / 28歲 / INTP</div>
+      <p>前東京 SaaS 工程師，在日本科技公司負責產品開發和技術架構。後轉型為台北科技自媒體，累積了豐富的科技內容創作經驗。2025 年來到澳門，觀察到本地中小企業對 AI 導入的強烈需求卻缺乏專業支援，於是創辦山中田。</p>
+      <p>擅長將複雜的技術概念轉化為非技術人員也能理解的語言，並設計出中小企業實際可執行的 AI 導入方案。</p>
+    </div>
+  </div>
+
+  <h2>服務內容</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>AI 策略諮詢</h3>
+      <p>為企業評估 AI 導入可行性，分析現有業務流程中哪些環節最適合 AI 介入，制定分階段的落地方案和預算規劃。</p>
+    </div>
+    <div class="service-card">
+      <h3>自動化方案設計</h3>
+      <p>運用 n8n、Make、Zapier 等低代碼工具，設計業務自動化工作流。從客戶管理、訂單處理到社群媒體管理，實現流程自動化。</p>
+    </div>
+    <div class="service-card">
+      <h3>數碼轉型諮詢</h3>
+      <p>協助傳統企業從紙本作業過渡到數碼化工具。包括 CRM 系統選型、雲端遷移、電子支付整合等全方位轉型支援。</p>
+    </div>
+    <div class="service-card">
+      <h3>企業 AI 培訓</h3>
+      <p>為團隊提供 ChatGPT、Claude、Gemini 等 AI 工具的實操培訓。不講理論，只教實際工作中怎麼用、用在哪裡最有效。</p>
+    </div>
+    <div class="service-card">
+      <h3>AI 知識平台</h3>
+      <p>澳門首個中文 AI 知識內容平台，定期發布針對澳門中小企業的 AI 實戰指南、工具評測、案例分析。所有內容免費公開。</p>
+    </div>
+  </div>
+
+  <h2>常用工具</h2>
+  <p>山中田在顧問服務中常用的 AI 和自動化工具：</p>
+  <div class="tools-list">
+    <span class="tool-tag">ChatGPT</span>
+    <span class="tool-tag">Claude</span>
+    <span class="tool-tag">Gemini</span>
+    <span class="tool-tag">n8n</span>
+    <span class="tool-tag">Make</span>
+    <span class="tool-tag">Zapier</span>
+    <span class="tool-tag">Notion</span>
+    <span class="tool-tag">Airtable</span>
+    <span class="tool-tag">Supabase</span>
+    <span class="tool-tag">Vercel</span>
+  </div>
+
+  <h2>目標客群</h2>
+  <ul>
+    <li><strong>月營收 100 萬以下的中小企業</strong> — 這是我們最核心的服務對象</li>
+    <li><strong>澳門本地商戶</strong> — 餐飲、零售、美容、旅遊、服務業等</li>
+    <li><strong>想導入 AI 但不知從何開始的企業主</strong></li>
+    <li><strong>已有數碼化基礎但想進一步優化的公司</strong></li>
+    <li><strong>粵港澳大灣區的中小企業</strong></li>
+  </ul>
+
+  <h2>為什麼選擇山中田？</h2>
+  <ul>
+    <li><strong>工程師背景</strong> — 不是只會講 PPT 的顧問，而是真正寫過代碼、做過產品的技術人</li>
+    <li><strong>澳門在地化</strong> — 了解澳門的商業環境、法規限制和市場特性</li>
+    <li><strong>務實落地</strong> — 不賣概念，只推薦中小企業實際能用、用得起的方案</li>
+    <li><strong>免費知識平台</strong> — 大量免費內容，先學習再決定是否需要顧問服務</li>
+    <li><strong>低代碼優先</strong> — 優先使用 n8n、Make 等低代碼工具，降低技術門檻和維護成本</li>
+    <li><strong>結果導向</strong> — 以 ROI 為衡量標準，不做花錢沒效果的方案</li>
+  </ul>
+
+  <div class="page-links">
+    <strong>探索更多：</strong>
+    <a href="index.html">首頁</a>
+    <a href="https://inari-kira-isla.github.io/yamanakada/">文章列表</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025-2026 山中田 Yamanakada — AI 科技顧問公司（非餐廳）</p>
+    <p style="margin-top:8px;">
+      <a href="https://cloudpipe-macao-app.vercel.app/macao">澳門商戶百科</a> ·
+      <a href="https://inari-kira-isla.github.io/inari-global-foods">稻荷環球食品</a> ·
+      <a href="https://inari-kira-isla.github.io/after-school-coffee">After School Coffee</a> ·
+      <a href="https://mind-coffee.vercel.app">Mind Cafe</a> ·
+      <a href="https://cloudpipe-directory.vercel.app">全球企業目錄</a>
+    </p>
+  </footer>
+</body>
+</html>
