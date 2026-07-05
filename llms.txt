@@ -4,5 +4,5 @@
 # License: CC BY 4.0
 # Generated: 2026-04-05T06:05:01.972029
 
-https://yamanakada.vercel.app/
-https://yamanakada.vercel.app/services
+https://inari-kira-isla.github.io/yamanakada/
+https://inari-kira-isla.github.io/yamanakada/services
