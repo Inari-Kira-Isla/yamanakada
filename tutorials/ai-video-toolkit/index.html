@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <script>/* smartrealm-move */if(/github\.io$/.test(location.hostname)){location.replace('https://smartrealm.vercel.app'+location.pathname.replace(/^\/yamanakada/,'')+location.search+location.hash)}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 剪片工具清單＋一鍵安裝 | 靈動智境</title>
+  <meta name="description" content="建築AI男 EP1 實際用過嘅 7 個剪片工具：Claude Code、Codex、HyperFrames、ffmpeg、Playwright、Whisper、OpenCV YuNet。每個附用途、安裝指令、官方網址，仲有一段一鍵複製提示詞貼畀 AI 自己裝。核實日期 2026-11-16。">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Joe｜從事水產貿易嘅建築AI男">
+  <link rel="canonical" href="https://smartrealm.vercel.app/tutorials/ai-video-toolkit/">
+  <link rel="llms-txt" href="https://smartrealm.vercel.app/llms.txt">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI 剪片工具清單＋一鍵安裝">
+  <meta property="og:description" content="EP1 實際用過嘅 7 個工具，每個附用途、安裝指令、官方網址。一鍵複製提示詞，貼畀你嘅 AI 逐步檢查同安裝。">
+  <meta property="og:image" content="https://smartrealm.vercel.app/images/og-image.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://smartrealm.vercel.app/tutorials/ai-video-toolkit/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="靈動智境人工智能 SMART REALM AI">
+  <meta property="article:published_time" content="2026-11-16">
+  <meta property="article:author" content="Joe｜從事水產貿易嘅建築AI男">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI 剪片工具清單＋一鍵安裝",
+    "description": "建築AI男 EP1 實際用過嘅 7 個剪片工具，附用途、安裝指令、官方網址同一鍵複製提示詞。",
+    "inLanguage": "zh-Hant",
+    "datePublished": "2026-11-16",
+    "dateModified": "2026-11-16",
+    "image": "https://smartrealm.vercel.app/images/og-image.jpg",
+    "mainEntityOfPage": "https://smartrealm.vercel.app/tutorials/ai-video-toolkit/",
+    "author": { "@type": "Person", "name": "Joe", "description": "從事水產貿易嘅建築AI男" },
+    "publisher": { "@type": "Organization", "name": "靈動智境人工智能 SMART REALM AI", "url": "https://smartrealm.vercel.app/" },
+    "citation": [
+      "https://code.claude.com/docs/en/setup",
+      "https://github.com/openai/codex",
+      "https://hyperframes.heygen.com",
+      "https://ffmpeg.org/",
+      "https://playwright.dev/python/docs/intro",
+      "https://github.com/openai/whisper",
+      "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet"
+    ]
+  }
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "點樣裝齊 AI 剪片用嘅 7 個工具（macOS）",
+    "description": "用 Homebrew、npm、pip 安裝建築AI男 EP1 用過嘅剪片工具，全域安裝同登入由你確認。",
+    "inLanguage": "zh-Hant",
+    "tool": [
+      { "@type": "HowToTool", "name": "Homebrew" },
+      { "@type": "HowToTool", "name": "Node.js 22 或以上" },
+      { "@type": "HowToTool", "name": "Python 3 同 pip" },
+      { "@type": "HowToTool", "name": "Claude 訂閱或 ChatGPT 帳號（用 Claude Code／Codex 先需要）" }
+    ],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "安裝 Claude Code 同 Codex", "url": "https://smartrealm.vercel.app/tutorials/ai-video-toolkit/#t-claude", "text": "npm install -g @anthropic-ai/claude-code；npm install -g @openai/codex。Claude Code 要 Claude 訂閱或帳號，Codex 用 ChatGPT 帳號登入（Free 都得）。" },
+      { "@type": "HowToStep", "position": 2, "name": "安裝 ffmpeg 同 Whisper", "url": "https://smartrealm.vercel.app/tutorials/ai-video-toolkit/#t-ffmpeg", "text": "brew install ffmpeg；brew install openai-whisper。" },
+      { "@type": "HowToStep", "position": 3, "name": "安裝 HyperFrames", "url": "https://smartrealm.vercel.app/tutorials/ai-video-toolkit/#t-hyperframes", "text": "npm install -g hyperframes，或者用 npx hyperframes init my-video。需要 Node.js 22 或以上同 ffmpeg。" },
+      { "@type": "HowToStep", "position": 4, "name": "安裝 Playwright 同 OpenCV", "url": "https://smartrealm.vercel.app/tutorials/ai-video-toolkit/#t-playwright", "text": "pip3 install playwright opencv-python；再下載 YuNet 模型 face_detection_yunet_2023mar.onnx。" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "清單入面嘅工具全部免費嗎？", "acceptedAnswer": { "@type": "Answer", "text": "ffmpeg、HyperFrames、Playwright、Whisper、OpenCV 呢 5 個係免費。Claude Code 要 Claude 訂閱或帳號，Codex 用 ChatGPT 帳號登入（Free 都得）。呢頁淨係列剪片同後期工具，唔包生成影片畫面嘅服務。" } },
+      { "@type": "Question", "name": "冇編程經驗都裝得到嗎？", "acceptedAnswer": { "@type": "Answer", "text": "得。將頁頂嘅提示詞貼入 Claude Code 或 Codex，佢會逐個檢查同安裝；遇到全域安裝、登入、會用到額度嘅位會先問你。你只需要答「做」或者「唔做」。" } },
+      { "@type": "Question", "name": "一定要全部 7 個都裝嗎？", "acceptedAnswer": { "@type": "Answer", "text": "唔使。ffmpeg 係剪接混音嘅底，裝呢個已經做到基本剪片。其餘按需要：要動畫字卡先裝 HyperFrames，要轉字幕先裝 Whisper，要檢查字卡有冇遮臉先裝 OpenCV。" } }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #6366f1; --bg: #fafafa; --text: #1e293b; --text-light: #64748b; --card-bg: #ffffff; --border: #e2e8f0;
+      --navy: #17243A; --navy-2: #22344f; --amber: #F2A33A; --amber-bg: #fff6e6; --cyan: #5FD0E0; --cyan-dark: #0b7285;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans TC', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.85; overflow-wrap: anywhere; }
+    a { color: var(--cyan-dark); }
+    a:hover { text-decoration: underline; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; background: #eef2f6; color: var(--navy); padding: 1px 6px; border-radius: 4px; }
+
+    nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    nav .container { max-width: 1080px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .logo { font-weight: 700; font-size: 1.1rem; color: var(--text); }
+    nav .logo span { color: var(--accent); }
+    nav .back { font-size: 0.9rem; color: var(--text-light); }
+
+    .hero { background-color: var(--navy);
+      background-image: linear-gradient(rgba(95,208,224,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(95,208,224,0.10) 1px, transparent 1px);
+      background-size: 32px 32px; color: #fff; padding: 56px 16px 48px; border-bottom: 4px solid var(--amber); }
+    .hero .inner { max-width: 760px; margin: 0 auto; }
+    .kicker { display: inline-block; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 4px; padding: 2px 10px; font-size: 0.8rem; letter-spacing: 0.08em; margin-bottom: 18px; }
+    .hero h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 18px; }
+    .hero h1 em { font-style: normal; color: var(--amber); }
+    .hero .lead { font-size: 1.1rem; color: #dbe6f3; margin-bottom: 20px; }
+    .hero .byline { font-size: 0.85rem; color: #9fb3cc; }
+    .hero .byline strong { color: #fff; font-weight: 500; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 0 16px 24px; }
+    section { padding-top: 40px; }
+    h2 { font-size: 1.45rem; font-weight: 700; line-height: 1.4; color: var(--navy); margin-bottom: 14px; }
+    h3 { font-size: 1.05rem; margin: 22px 0 8px; color: var(--navy); }
+    p { margin-bottom: 14px; }
+    ul.plain { margin: 8px 0 16px 22px; }
+    ul.plain li { margin-bottom: 8px; }
+
+    .code { position: relative; background: var(--navy); border-radius: 10px; margin: 10px 0 12px; border-left: 4px solid var(--cyan); }
+    .code pre { margin: 0; padding: 12px 76px 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+    .code code { background: transparent; color: #e8f4fa; padding: 0; font-size: 0.88rem; line-height: 1.7; }
+    .copy { position: absolute; top: 8px; right: 8px; background: transparent; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 6px; font: inherit; font-size: 0.78rem; padding: 3px 10px; cursor: pointer; min-height: 30px; }
+    .copy:hover { background: rgba(95,208,224,0.15); }
+    .copy.done { color: var(--navy); background: var(--cyan); }
+
+    .note { background: #eef6f8; border-left: 4px solid var(--cyan-dark); border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 16px 0; }
+    .note p:last-child { margin-bottom: 0; }
+    .warn { background: var(--amber-bg); border: 2px solid var(--amber); border-radius: 12px; padding: 18px 18px 6px; margin: 18px 0; }
+    .warn .tag { display: inline-block; background: var(--amber); color: var(--navy); font-weight: 900; font-size: 0.9rem; padding: 2px 12px; border-radius: 4px; margin-bottom: 10px; }
+    .warn p { color: #4a3510; }
+
+    details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; }
+    details summary { cursor: pointer; font-weight: 700; color: var(--navy); padding: 14px 16px; }
+    details[open] summary { border-bottom: 1px solid var(--border); }
+    details .ans { padding: 14px 16px 2px; color: #334155; }
+
+    .source { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-top: 8px; }
+    .source li { margin-bottom: 8px; }
+    .verified { margin-top: 16px; font-size: 0.9rem; color: var(--text-light); border-top: 1px dashed var(--border); padding-top: 14px; }
+
+    footer { background: #1e293b; color: #94a3b8; padding: 40px 16px; text-align: center; margin-top: 48px; }
+    footer h4 { color: #fff; font-size: 1.05rem; margin-bottom: 12px; }
+    footer p { margin-bottom: 8px; font-size: 0.9rem; }
+    footer a { color: #818cf8; }
+
+    .qcard { background: var(--navy); color: #e8f0f8; border: 2px solid var(--amber); border-radius: 14px; padding: 18px 16px 16px; margin-top: 8px; }
+    .qcard .qtag { display: inline-block; background: var(--amber); color: var(--navy); font-weight: 900; font-size: 0.8rem; padding: 2px 10px; border-radius: 4px; margin-bottom: 8px; }
+    .qcard h2 { color: #fff; font-size: 1.2rem; margin-bottom: 6px; }
+    .qcard p { color: #cfe0f0; font-size: 0.95rem; margin-bottom: 10px; }
+    .qcard pre { background: #0f1a2b; border-left: 4px solid var(--cyan); border-radius: 8px; padding: 12px; margin: 0 0 12px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+    .qcard pre code { background: transparent; color: #e8f4fa; padding: 0; font-size: 0.82rem; line-height: 1.65; }
+    .bigcopy { display: block; width: 100%; min-height: 52px; background: var(--amber); color: var(--navy); border: 0; border-radius: 10px; font: inherit; font-weight: 900; font-size: 1.1rem; cursor: pointer; }
+    .bigcopy:hover { filter: brightness(1.08); }
+    .bigcopy.done { background: var(--cyan); }
+    .qmsg { min-height: 1.6em; margin: 8px 0 0; font-size: 0.9rem; color: var(--cyan); }
+
+    .tool { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 6px; margin: 14px 0; }
+    .tool h3 { margin: 0 0 4px; }
+    .tool .use { margin-bottom: 6px; }
+    .tool .fine { font-size: 0.85rem; color: var(--text-light); margin-bottom: 8px; }
+    .badge { display: inline-block; font-size: 0.75rem; font-weight: 700; border-radius: 4px; padding: 1px 8px; margin-left: 6px; vertical-align: middle; }
+    .badge.acct { background: var(--amber-bg); color: #7a4a00; border: 1px solid var(--amber); }
+    .badge.free { background: #e6f6f8; color: var(--cyan-dark); border: 1px solid var(--cyan-dark); }
+    ol.flow { list-style: none; counter-reset: s; margin: 8px 0 16px; }
+    ol.flow li { counter-increment: s; position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid var(--border); }
+    ol.flow li:last-child { border-bottom: 0; }
+    ol.flow li::before { content: counter(s); position: absolute; left: 0; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: var(--amber); font-weight: 900; display: flex; align-items: center; justify-content: center; border: 2px solid var(--cyan); }
+    @media (min-width: 769px) {
+      .hero { padding: 80px 24px 64px; }
+      .hero h1 { font-size: 2.6rem; }
+      main { padding: 0 24px 24px; }
+      nav .container { padding: 0 24px; }
+      .code code { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="logo" href="../../">靈動智<span>境</span> AI</a>
+    <a class="back" href="../../#articles">&larr; 返回文章列表</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <span class="kicker">AI 剪片教學筆記</span>
+    <h1>AI 剪片工具清單＋<em>一鍵安裝</em></h1>
+    <p class="lead">建築AI男 EP1 實際用過嘅 7 個工具，每個講用嚟做乜、點裝、官方網址喺邊。撳一個掣複製提示詞，貼畀你嘅 AI，佢逐個幫你檢查同安裝。</p>
+    <p class="byline">作者 <strong>Joe｜從事水產貿易嘅建築AI男</strong> · 指令核實日期 2026-11-16 · macOS · 約 6 分鐘讀完</p>
+  </div>
+</header>
+
+<main>
+  <article>
+
+    <section id="oneclick">
+      <div class="qcard" id="card-a">
+        <span class="qtag">一鍵複製</span>
+        <h2>貼畀 Claude Code（或 Codex）：逐個檢查同安裝</h2>
+        <p>提示詞只會處理下面 7 個工具。全域安裝、登入、會用額度嘅動作，佢會先問你。</p>
+        <pre id="prompt-a"><code>你係我嘅 AI 助手。請幫我喺 macOS 逐個檢查同安裝以下 7 個剪片工具。逐步做，每步講結果：
+1. 先檢查有冇 brew、node（要 ≥22）、python3、pip3；冇嘅話停低告訴我，由我決定點裝，你唔好自己裝 Homebrew、Node 或 Python。
+2. 逐個用指令檢查有冇裝：claude --version、codex --version、npx --no-install hyperframes --version、ffmpeg -version、pip3 show playwright、whisper --help、pip3 show opencv-python。已經裝咗嘅跳過。
+3. 未裝嘅，用以下官方指令：
+   - Claude Code：npm install -g @anthropic-ai/claude-code
+   - Codex CLI：npm install -g @openai/codex
+   - HyperFrames：npm install -g hyperframes（要 Node ≥22 同 ffmpeg）
+   - ffmpeg：brew install ffmpeg
+   - Playwright：pip3 install playwright ，再 python3 -m playwright install chromium
+   - Whisper：brew install openai-whisper
+   - OpenCV：pip3 install opencv-python ，YuNet 模型由 https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet 下載 face_detection_yunet_2023mar.onnx
+4. 每一個全域安裝（npm -g、brew、pip）之前，先逐個問我，等我講「做」先做。
+5. 登入一律由我自己做：Claude Code 要 Claude 訂閱或帳號，Codex 用 ChatGPT 帳號登入。你唔好代我登入，亦唔好幫我買或者升級任何訂閱。
+6. 淨係處理呢 7 個，唔好裝其他工具；唔好改我其他設定，唔好刪檔。
+7. 最後用一個表格列出每個工具：已裝／新裝／跳過、版本號。</code></pre>
+        <button class="bigcopy" type="button" data-target="prompt-a" data-msg="msg-a">一鍵複製</button>
+        <p class="qmsg" id="msg-a" role="status" aria-live="polite"></p>
+      </div>
+      <div class="note">
+        <p>Claude Code 要 Claude 訂閱或帳號先用到，Codex 用 ChatGPT 帳號登入（Free 都得）。未裝 Claude Code 或 Codex 嘅話，先自己裝其中一個，再貼提示詞。</p>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>EP1 實際用過嘅 7 個工具</h2>
+      <p>下面每個都係 EP1 製作過程用過。指令喺 2026-11-16 逐條對過官方來源，同本機版本核實，結果寫喺每張卡。</p>
+
+      <div class="tool" id="t-claude">
+        <h3>Claude Code <span class="badge acct">需要訂閱／帳號</span></h3>
+        <p class="use">用嚟做乜：寫劇本、拆分鏡、寫剪接腳本，成個流程由佢統籌。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>npm install -g @anthropic-ai/claude-code</code></pre></div>
+        <p class="fine">要 Claude 訂閱或帳號先用到，並唔係完全免費。官方網址：<a href="https://code.claude.com/docs/en/setup" rel="noopener" target="_blank">code.claude.com/docs/en/setup</a>。本機版本 2.1.325。</p>
+      </div>
+
+      <div class="tool" id="t-codex">
+        <h3>Codex CLI <span class="badge acct">需要 ChatGPT 帳號</span></h3>
+        <p class="use">用嚟做乜：獨立覆檢，同 Claude 分開睇一次有冇錯。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>npm install -g @openai/codex</code></pre></div>
+        <p class="fine">用 ChatGPT 帳號登入，Free 都得。官方網址：<a href="https://github.com/openai/codex" rel="noopener" target="_blank">github.com/openai/codex</a>。本機版本 codex-cli 0.159.2。同 Claude 點樣互相用，睇<a href="../claude-codex/">雙AI 教學</a>。</p>
+      </div>
+
+      <div class="tool" id="t-hyperframes">
+        <h3>HyperFrames <span class="badge free">免費</span></h3>
+        <p class="use">用嚟做乜：用 HTML 做動畫字卡，輸出成影片。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>npm install -g hyperframes</code></pre></div>
+        <p class="fine">唔想全域安裝，可以直接 <code>npx hyperframes init my-video</code>。要 Node.js 22 或以上，同埋 ffmpeg。官方網址：<a href="https://hyperframes.heygen.com" rel="noopener" target="_blank">hyperframes.heygen.com</a>。npm 套件名係 <code>hyperframes</code>，本機版本 0.9.19。</p>
+      </div>
+
+      <div class="tool" id="t-ffmpeg">
+        <h3>ffmpeg <span class="badge free">免費</span></h3>
+        <p class="use">用嚟做乜：切片、拼接、轉格式、混音，EP1 嘅剪接同混音都靠佢。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install ffmpeg</code></pre></div>
+        <p class="fine">官方網址：<a href="https://ffmpeg.org/" rel="noopener" target="_blank">ffmpeg.org</a>。本機版本 8.1.1。</p>
+      </div>
+
+      <div class="tool" id="t-playwright">
+        <h3>Python Playwright <span class="badge free">免費</span></h3>
+        <p class="use">用嚟做乜：自動開網頁並錄屏，EP1 片尾嘅網頁介紹段就係咁錄。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>pip3 install playwright
+python3 -m playwright install chromium</code></pre></div>
+        <p class="fine">官方網址：<a href="https://playwright.dev/python/docs/intro" rel="noopener" target="_blank">playwright.dev/python</a>。本機版本 1.58.0。</p>
+      </div>
+
+      <div class="tool" id="t-whisper">
+        <h3>Whisper <span class="badge free">免費</span></h3>
+        <p class="use">用嚟做乜：將配音轉成文字，對字幕同讀音。粵語夾英文會有錯，要人耳再聽。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install openai-whisper</code></pre></div>
+        <p class="fine">官方網址：<a href="https://github.com/openai/whisper" rel="noopener" target="_blank">github.com/openai/whisper</a>。本機版本 20250625_5。</p>
+      </div>
+
+      <div class="tool" id="t-opencv">
+        <h3>OpenCV YuNet 人臉偵測 <span class="badge free">免費</span></h3>
+        <p class="use">用嚟做乜：逐格量字卡、字幕有冇遮住人臉。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>pip3 install opencv-python</code></pre></div>
+        <p class="fine">YuNet 模型 <code>face_detection_yunet_2023mar.onnx</code> 喺 OpenCV 官方 model zoo 下載：<a href="https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet" rel="noopener" target="_blank">github.com/opencv/opencv_zoo</a>。呢條 pip 指令確認套件存在（最新 5.0.0.93），本機未重新安裝實測。</p>
+      </div>
+    </section>
+
+    <section id="flow">
+      <h2>點樣組合：EP1 嘅流程</h2>
+      <ol class="flow">
+        <li><strong>劇本</strong>：Claude Code 寫，Codex 獨立睇一次。</li>
+        <li><strong>分鏡</strong>：Claude Code 拆成逐鏡清單。</li>
+        <li><strong>生成</strong>：用你揀嘅畫面生成服務出片，呢頁唔列。</li>
+        <li><strong>字卡</strong>：HyperFrames 做動畫字卡，Playwright 錄網頁段。</li>
+        <li><strong>剪接</strong>：ffmpeg 按分鏡切同拼。</li>
+        <li><strong>混音</strong>：ffmpeg 混配音同背景音。</li>
+        <li><strong>覆檢</strong>：Whisper 轉文字對稿，OpenCV YuNet 量字卡有冇遮臉，Codex 再審一次。</li>
+      </ol>
+      <p>Claude 同 Codex 點樣互相叫對方做嘢，睇<a href="../claude-codex/">雙AI 教學：Claude 用 Codex，Codex 用 Claude</a>。</p>
+    </section>
+
+    <section id="others">
+      <h2>其他免費工具（我哋未喺 EP1 用，供參考）</h2>
+      <div class="warn" role="note">
+        <span class="tag">未經 EP1 實測</span>
+        <p>呢節嘅工具冇喺 EP1 用過，淨係對過官方網址同 Homebrew 紀錄。一鍵提示詞唔會裝呢節嘅工具。</p>
+      </div>
+      <div class="tool">
+        <h3>DaVinci Resolve（免費版）</h3>
+        <p class="use">用嚟做乜：完整剪輯、調色、混音軟件。官方有免費版，功能有限制，詳情睇官網。</p>
+        <p class="fine">冇 Homebrew cask，要喺官網下載：<a href="https://www.blackmagicdesign.com/products/davinciresolve" rel="noopener" target="_blank">blackmagicdesign.com</a></p>
+      </div>
+      <div class="tool">
+        <h3>OBS Studio</h3>
+        <p class="use">用嚟做乜：錄屏、直播。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install --cask obs</code></pre></div>
+        <p class="fine">官方網址：<a href="https://obsproject.com/" rel="noopener" target="_blank">obsproject.com</a>（開源）</p>
+      </div>
+      <div class="tool">
+        <h3>Audacity</h3>
+        <p class="use">用嚟做乜：音訊剪輯、去噪、錄音。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install --cask audacity</code></pre></div>
+        <p class="fine">官方網址：<a href="https://www.audacityteam.org/" rel="noopener" target="_blank">audacityteam.org</a></p>
+      </div>
+      <div class="tool">
+        <h3>HandBrake</h3>
+        <p class="use">用嚟做乜：轉檔同壓縮影片。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install --cask handbrake-app</code></pre></div>
+        <p class="fine">官方網址：<a href="https://handbrake.fr/" rel="noopener" target="_blank">handbrake.fr</a>（開源）</p>
+      </div>
+      <div class="tool">
+        <h3>Shotcut</h3>
+        <p class="use">用嚟做乜：開源影片剪輯軟件，有畫面介面。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install --cask shotcut</code></pre></div>
+        <p class="fine">官方網址：<a href="https://www.shotcut.org/" rel="noopener" target="_blank">shotcut.org</a></p>
+      </div>
+      <div class="tool">
+        <h3>ImageMagick</h3>
+        <p class="use">用嚟做乜：用指令批量改圖片尺寸、格式。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install imagemagick</code></pre></div>
+        <p class="fine">官方網址：<a href="https://imagemagick.org" rel="noopener" target="_blank">imagemagick.org</a></p>
+      </div>
+      <div class="tool">
+        <h3>SoX</h3>
+        <p class="use">用嚟做乜：用指令處理音訊，轉格式、改音量、拼接。</p>
+        <div class="code"><button class="copy" type="button" aria-label="複製安裝指令">複製</button><pre><code>brew install sox</code></pre></div>
+        <p class="fine">官方網址：<a href="https://sox.sourceforge.net/" rel="noopener" target="_blank">sox.sourceforge.net</a></p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>常見問題</h2>
+      <details>
+        <summary>清單入面嘅工具全部免費嗎？</summary>
+        <div class="ans">
+          <p>ffmpeg、HyperFrames、Playwright、Whisper、OpenCV 呢 5 個係免費。Claude Code 要 Claude 訂閱或帳號，Codex 用 ChatGPT 帳號登入（Free 都得）。呢頁淨係列剪片同後期工具，唔包生成影片畫面嘅服務。</p>
+        </div>
+      </details>
+      <details>
+        <summary>冇編程經驗都裝得到嗎？</summary>
+        <div class="ans">
+          <p>得。將頁頂嘅提示詞貼入 Claude Code 或 Codex，佢會逐個檢查同安裝；遇到全域安裝、登入、會用到額度嘅位會先問你，你答「做」或者「唔做」就得。</p>
+        </div>
+      </details>
+      <details>
+        <summary>一定要全部 7 個都裝嗎？</summary>
+        <div class="ans">
+          <p>唔使。ffmpeg 係剪接混音嘅底，裝呢個已經做到基本剪片。其餘按需要：要動畫字卡先裝 HyperFrames，要轉字幕先裝 Whisper，要檢查字卡有冇遮臉先裝 OpenCV。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="sources">
+      <h2>官方來源</h2>
+      <div class="source">
+        <ul class="plain">
+          <li>Claude Code：<a href="https://code.claude.com/docs/en/setup" rel="noopener" target="_blank">code.claude.com/docs/en/setup</a></li>
+          <li>Codex：<a href="https://github.com/openai/codex" rel="noopener" target="_blank">github.com/openai/codex</a></li>
+          <li>HyperFrames：<a href="https://hyperframes.heygen.com" rel="noopener" target="_blank">hyperframes.heygen.com</a></li>
+          <li>ffmpeg：<a href="https://ffmpeg.org/" rel="noopener" target="_blank">ffmpeg.org</a></li>
+          <li>Playwright Python：<a href="https://playwright.dev/python/docs/intro" rel="noopener" target="_blank">playwright.dev/python</a></li>
+          <li>Whisper：<a href="https://github.com/openai/whisper" rel="noopener" target="_blank">github.com/openai/whisper</a></li>
+          <li>OpenCV YuNet：<a href="https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet" rel="noopener" target="_blank">github.com/opencv/opencv_zoo</a></li>
+        </ul>
+        <p class="verified"><strong>核實日期：2026-11-16（macOS）。</strong>版本同指令日後可能更新，用之前以官方頁面最新內容為準。</p>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <h4>靈動智境人工智能 SMART REALM AI</h4>
+  <p>澳門 AI 科技顧問公司 | Macau AI Technology Consulting</p>
+  <p>
+    <a href="../../">首頁</a> ·
+    <a href="../../llms.txt">llms.txt</a> ·
+    <a href="../../sitemap.xml">Sitemap</a> ·
+    <a href="../../robots.txt">Robots</a>
+  </p>
+  <p>&copy; 2026 靈動智境 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</footer>
+
+<script>
+(function () {
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    return ok;
+  }
+  document.querySelectorAll('.code .copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var text = btn.parentNode.querySelector('code').textContent;
+      function done(ok) {
+        btn.textContent = ok ? '已複製' : '請手動複製';
+        btn.classList.toggle('done', ok);
+        setTimeout(function () { btn.textContent = '複製'; btn.classList.remove('done'); }, 1800);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallbackCopy(text)); });
+      } else { done(fallbackCopy(text)); }
+    });
+  });
+})();
+
+(function () {
+  function fb(pre) {
+    var ta = document.createElement('textarea');
+    ta.value = pre.textContent; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    if (!ok) { var r = document.createRange(); r.selectNodeContents(pre); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+    return ok;
+  }
+  document.querySelectorAll('.bigcopy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var pre = document.getElementById(btn.getAttribute('data-target'));
+      var msg = document.getElementById(btn.getAttribute('data-msg'));
+      var text = pre.textContent;
+      function done(ok) {
+        msg.textContent = ok ? '已複製，貼去你嘅 AI' : '自動複製失敗，已幫你選取全文，請按 Ctrl/Cmd+C';
+        btn.classList.toggle('done', ok);
+        btn.textContent = ok ? '已複製' : '一鍵複製';
+        setTimeout(function () { btn.classList.remove('done'); btn.textContent = '一鍵複製'; }, 3000);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fb(pre)); });
+      } else { done(fb(pre)); }
+    });
+  });
+})();
+</script>
+<script src="https://cloudpipe-macao-app.vercel.app/spider-track.js" data-site="yamanakada"></script>
+<img src="https://client-ai-tracker.inariglobal.workers.dev/yamanakada/pixel.gif?p=/tutorials/ai-video-toolkit/" width="1" height="1" alt="" loading="eager" style="position:absolute;left:-9999px">
+</body>
+</html>
