@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude × Codex 雙AI 教學筆記：5 步令兩個 AI 一個做一個審 | 靈動智境</title>
-  <meta name="description" content="Claude Code 寫、Codex 審：用 OpenAI 官方外掛 codex-plugin-cc，5 步裝好、setup、review、adversarial-review、review gate，附額度警告同 FAQ。核實日期 2026-11-15。">
+  <title>雙AI 教學：Claude 用 Codex，Codex 用 Claude | 靈動智境</title>
+  <meta name="description" content="雙向雙AI：Claude Code 叫 Codex 審 code（官方外掛 codex-plugin-cc），Codex 反過來用 Claude Code 做 MCP 工具（codex mcp add）。兩段一鍵複製提示詞，貼畀 AI 自己裝。實測日期 2026-11-15。">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Joe｜從事水產貿易嘅建築AI男">
   <link rel="canonical" href="https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/">
   <link rel="llms-txt" href="https://inari-kira-isla.github.io/yamanakada/llms.txt">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Claude × Codex 雙AI 教學筆記：一個做，一個審">
-  <meta property="og:description" content="用 OpenAI 官方外掛，喺 Claude Code 入面叫 Codex 審 code。5 步教學＋額度警告。核實日期 2026-11-15。">
+  <meta property="og:title" content="雙AI 教學：Claude 用 Codex，Codex 用 Claude">
+  <meta property="og:description" content="兩個方向都跑通：Claude 叫 Codex 審 code，Codex 用 Claude 做 MCP 工具。附兩段一鍵複製提示詞同安全警告。2026-11-15 實測。">
   <meta property="og:image" content="https://inari-kira-isla.github.io/yamanakada/images/og-image.jpg">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/">
@@ -26,8 +26,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Claude × Codex 雙AI 教學筆記：5 步令兩個 AI 一個做一個審",
-    "description": "用 OpenAI 官方外掛 codex-plugin-cc，喺 Claude Code 入面叫 Codex 審 code：安裝、setup、review、adversarial-review、review gate。",
+    "headline": "雙AI 教學：Claude 用 Codex，Codex 用 Claude",
+    "description": "雙向雙AI：用 OpenAI 官方外掛 codex-plugin-cc 令 Claude Code 叫 Codex 審 code；用 codex mcp add 令 Codex 用 Claude Code 做 MCP 工具。附一鍵複製提示詞、安全警告同實測紀錄。",
     "inLanguage": "zh-Hant",
     "datePublished": "2026-11-15",
     "dateModified": "2026-11-15",
@@ -43,7 +43,11 @@
       "name": "靈動智境人工智能 SMART REALM AI",
       "url": "https://inari-kira-isla.github.io/yamanakada/"
     },
-    "citation": "https://github.com/openai/codex-plugin-cc"
+    "citation": [
+      "https://github.com/openai/codex-plugin-cc",
+      "https://code.claude.com/docs/en/mcp#use-claude-code-as-an-mcp-server",
+      "https://developers.openai.com/codex/mcp"
+    ]
   }
   </script>
 
@@ -52,7 +56,7 @@
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "點樣喺 Claude Code 入面用 Codex 外掛審 code",
+    "name": "方向 A：點樣喺 Claude Code 入面用 Codex 外掛審 code",
     "description": "用 OpenAI 官方外掛 codex-plugin-cc，令 Claude Code 負責寫、Codex 負責審。",
     "inLanguage": "zh-Hant",
     "tool": [
@@ -110,7 +114,9 @@
       { "@type": "Question", "name": "用 Codex 外掛要另外開一個 Codex 帳號嗎？", "acceptedAnswer": { "@type": "Answer", "text": "如果你部機已經登入咗 Codex，外掛即用。如果你淨係用 Claude Code、未用過 Codex，就要用 ChatGPT 帳號或者 API key 登入 Codex。ChatGPT 訂閱（包括 Free）都得。打 /codex:setup 檢查，未登入就打 !codex login。" } },
       { "@type": "Question", "name": "外掛會另外開一個 Codex 運行環境嗎？", "acceptedAnswer": { "@type": "Answer", "text": "唔會。外掛通過你本機嘅 Codex CLI 同 Codex app server 做嘢，用同一個安裝、同一個登入狀態、同一個 repo checkout 同本機環境。" } },
       { "@type": "Question", "name": "我已經有 Codex 設定或者 API key，外掛會用到嗎？", "acceptedAnswer": { "@type": "Answer", "text": "會。外掛用你本機 Codex CLI，所以你現有嘅登入方式同 config 照樣有效，包括 ~/.codex/config.toml 同專案層面嘅 .codex/config.toml（專案層設定要專案已被信任先會載入）。" } },
-      { "@type": "Question", "name": "/codex:review 同 /codex:adversarial-review 有咩分別？", "acceptedAnswer": { "@type": "Answer", "text": "/codex:review 係一般唯讀審查，唔可以帶自訂重點。/codex:adversarial-review 可以喺後面加重點文字，專登質疑你揀嘅實作同設計取捨，例如 auth、資料遺失、rollback、race condition 呢類風險位。兩個都係唯讀，唔會改你嘅檔案。" } }
+      { "@type": "Question", "name": "/codex:review 同 /codex:adversarial-review 有咩分別？", "acceptedAnswer": { "@type": "Answer", "text": "/codex:review 係一般唯讀審查，唔可以帶自訂重點。/codex:adversarial-review 可以喺後面加重點文字，專登質疑你揀嘅實作同設計取捨，例如 auth、資料遺失、rollback、race condition 呢類風險位。兩個都係唯讀，唔會改你嘅檔案。" } },
+      {"@type": "Question", "name": "Codex 用 Claude 安唔安全？", "acceptedAnswer": {"@type": "Answer", "text": "唔係全無風險。Codex 用 Claude 要將 Claude Code 當 MCP server，非互動 codex exec 預設會擋 MCP 工具，要加 default_tools_approval_mode=\"approve\"，等於畀 Codex 用 Claude 嘅 Bash 等工具。建議只喺信任嘅資料夾、用單次 -c 覆寫，唔好寫死入 config.toml，亦唔好開 --dangerously-bypass-approvals-and-sandbox。"}},
+      {"@type": "Question", "name": "兩個方向要唔要同時裝？", "acceptedAnswer": {"@type": "Answer", "text": "唔使。方向 A 係喺 Claude Code 裝 codex-plugin-cc 外掛，方向 B 係喺 Codex 加一個 claude MCP server，兩邊獨立，揀你要嘅方向就得。2026-11-15 兩個方向都喺同一部機分開實測跑通。"}}
     ]
   }
   </script>
@@ -227,6 +233,27 @@
     footer p { margin-bottom: 8px; font-size: 0.9rem; }
     footer a { color: #818cf8; }
 
+
+    /* 一鍵複製卡 */
+    .qc { display: grid; gap: 16px; margin-top: 8px; }
+    .qcard { background: var(--navy); color: #e8f0f8; border: 2px solid var(--amber); border-radius: 14px; padding: 18px 16px 16px; }
+    .qcard .qtag { display: inline-block; background: var(--amber); color: var(--navy); font-weight: 900; font-size: 0.8rem; padding: 2px 10px; border-radius: 4px; margin-bottom: 8px; }
+    .qcard h2 { color: #fff; font-size: 1.2rem; margin-bottom: 6px; }
+    .qcard p { color: #cfe0f0; font-size: 0.95rem; margin-bottom: 10px; }
+    .qcard pre { background: #0f1a2b; border-left: 4px solid var(--cyan); border-radius: 8px; padding: 12px; margin: 0 0 12px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+    .qcard pre code { background: transparent; color: #e8f4fa; padding: 0; font-size: 0.82rem; line-height: 1.65; }
+    .qcard .qwarn { background: rgba(242,163,58,0.14); border: 1px solid var(--amber); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; color: #ffe2b0; font-size: 0.9rem; }
+    .qcard .qwarn code { background: rgba(255,255,255,0.14); color: #ffd28a; }
+    .bigcopy { display: block; width: 100%; min-height: 52px; background: var(--amber); color: var(--navy); border: 0; border-radius: 10px; font: inherit; font-weight: 900; font-size: 1.1rem; cursor: pointer; }
+    .bigcopy:hover { filter: brightness(1.08); }
+    .bigcopy.done { background: var(--cyan); }
+    .qmsg { min-height: 1.6em; margin: 8px 0 0; font-size: 0.9rem; color: var(--cyan); }
+    .dir-tag { display: inline-block; background: var(--navy); color: var(--amber); font-weight: 900; border-radius: 6px; padding: 2px 12px; font-size: 0.85rem; margin-bottom: 8px; }
+    .dir-head { border-top: 4px solid var(--amber); margin-top: 48px; padding-top: 28px; }
+    table.rec { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 0.92rem; }
+    table.rec th, table.rec td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; background: #fff; }
+    table.rec th { background: #eef2f6; color: var(--navy); }
+    @media (min-width: 769px) { .qc { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 769px) {
       .hero { padding: 80px 24px 64px; }
       .hero h1 { font-size: 2.6rem; }
@@ -248,17 +275,63 @@
 <header class="hero">
   <div class="inner">
     <span class="kicker">雙AI 教學筆記</span>
-    <h1>兩個 AI 唔使揀：<em>一個做，一個審</em></h1>
-    <p class="lead">Claude Code 寫 code，Codex 負責審。OpenAI 官方出咗個外掛，喺 Claude Code 入面一行指令就叫到 Codex 開工。5 步裝好、用得。</p>
-    <p class="byline">作者 <strong>Joe｜從事水產貿易嘅建築AI男</strong> · 核實日期 2026-11-15 · 約 6 分鐘讀完</p>
+    <h1>雙AI 教學：<em>Claude 用 Codex，Codex 用 Claude</em></h1>
+    <p class="lead">兩個方向都行得通：喺 Claude Code 入面叫 Codex 審 code，或者喺 Codex 入面叫 Claude Code 做工具。下面兩段提示詞，一鍵複製，貼畀你嘅 AI 就會幫你裝。</p>
+    <p class="byline">作者 <strong>Joe｜從事水產貿易嘅建築AI男</strong> · 實測日期 2026-11-15 · 約 8 分鐘讀完</p>
   </div>
 </header>
 
 <main>
   <article>
 
+    <section id="oneclick">
+      <h2>一鍵複製：貼畀你嘅 AI</h2>
+      <p>揀你用緊嘅 AI，撳大掣複製，貼入去，佢會逐步幫你做。全域安裝、登入、耗額度嘅動作，提示詞已寫明要先問你。</p>
+      <div class="qc">
+        <div class="qcard" id="card-a">
+          <span class="qtag">方向 A</span>
+          <h2>貼畀 Claude Code：等 Claude 識用 Codex</h2>
+          <p>裝 OpenAI 官方 Codex 外掛，之後喺 Claude 入面打 <code>/codex:review</code> 就叫到 Codex 審 code。</p>
+          <pre id="prompt-a"><code>你係我嘅 Claude Code 助手。請幫我裝好 OpenAI 官方 Codex 外掛（https://github.com/openai/codex-plugin-cc）。逐步做，每步講結果：
+1. 檢查：node --version（要 ≥18.18）、codex --version、codex login status；冇 codex CLI 或未登入就停低，叫我自己喺終端機做（npm 全域安裝同登入由我親手做，你唔好代做）。
+2. 執行：claude plugin marketplace add openai/codex-plugin-cc ，然後 claude plugin install codex@openai-codex ，再 claude plugin list 確認見到 codex@openai-codex。
+3. 叫我喺聊天框打 /reload-plugins，再打 /codex:setup（會顯示 Codex 係咪已就緒、已登入；未登入就叫我打 !codex login）。
+4. 教我三個指令：/codex:review（審查未 commit 改動，要喺有改動嘅 git 資料夾，可加 --wait）、/codex:adversarial-review（挑戰式審查）、/codex:rescue（交畀 Codex 接手難題）。
+5. 唔好開 review gate（/codex:setup --enable-review-gate 會每次停止都叫 Codex 審查，好食額度）。
+6. 遇到全域安裝、登入、或者會耗用我額度嘅動作，一律先問我，等我講「做」先做。
+全程唔好改我其他設定，唔好刪檔。</code></pre>
+          <button class="bigcopy" type="button" data-target="prompt-a" data-msg="msg-a">一鍵複製</button>
+          <p class="qmsg" id="msg-a" role="status" aria-live="polite"></p>
+        </div>
+        <div class="qcard" id="card-b">
+          <span class="qtag">方向 B</span>
+          <h2>貼畀 Codex：等 Codex 識用 Claude</h2>
+          <p>將 Claude Code 加成 Codex 嘅 MCP 工具，之後 Codex 可以叫 Claude 做嘢。</p>
+          <div class="qwarn"><strong>安全警告：</strong><code>default_tools_approval_mode="approve"</code> 等於畀 Codex 用 Claude 嘅 Bash 等工具。只喺你信任嘅資料夾用；建議用單次 <code>-c</code> 覆寫，唔好寫死入設定檔。</div>
+          <pre id="prompt-b"><code>你係我嘅 Codex 助手。請幫我設定 Codex 用 Claude Code 做 MCP 工具：
+1. 檢查 claude --version 同 codex --version；冇 claude 就停低告訴我。
+2. 執行：codex mcp add claude -- claude mcp serve ，再 codex mcp list 同 codex mcp get claude 確認 claude 係 enabled。
+3. 教我試用：喺一個我信任嘅資料夾跑
+codex exec --skip-git-repo-check -c &#x27;mcp_servers.claude.default_tools_approval_mode=&quot;approve&quot;&#x27; &quot;Use the claude MCP server&#x27;s tools to list the files in the current directory, then reply with just the file names.&quot; &lt;/dev/null
+（非互動 exec 預設會擋 MCP 工具：「requires approval, but approval policy is never」，所以要呢個 -c 旗標。）
+4. 提醒我：呢個旗標等於畀 Codex 用 Claude 嘅 Bash 等工具，只喺信任嘅資料夾用；唔好開 --dangerously-bypass-approvals-and-sandbox。
+5. 唔好將 default_tools_approval_mode 寫死入 ~/.codex/config.toml，只用單次 -c 覆寫。
+6. 遇到全域安裝、登入、或者會耗用我額度嘅動作，一律先問我，等我講「做」先做；唔好自己開 review gate。
+7. 還原：codex mcp remove claude</code></pre>
+          <button class="bigcopy" type="button" data-target="prompt-b" data-msg="msg-b">一鍵複製</button>
+          <p class="qmsg" id="msg-b" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dir-a" class="dir-head">
+      <span class="dir-tag">方向 A</span>
+      <h2>Claude 用 Codex：一個做，一個審</h2>
+      <p>OpenAI 官方外掛 <code>codex-plugin-cc</code>，喺 Claude Code 入面一行指令叫 Codex 開工。以下 5 步，每步都係你手動做嘅版本（提示詞係叫 Claude 代你做）。</p>
+    </section>
+
     <section id="prereq">
-      <h2>開始前要有乜</h2>
+      <h2>方向 A：開始前要有乜</h2>
       <ul class="checklist">
         <li><b>Claude Code</b>：呢個外掛係畀 Claude Code 用家做嘅，要先裝好。</li>
         <li><b>Node.js 18.18 或以上</b></li>
@@ -367,7 +440,7 @@
     </section>
 
     <section id="advanced">
-      <h2>進階：交嘢畀 Codex，或者成個對話搬過去</h2>
+      <h2>方向 A 進階：交嘢畀 Codex，或者成個對話搬過去</h2>
       <div class="adv">
         <h3><code>/codex:rescue</code>：將任務交畀 Codex 做</h3>
         <p>前面 Codex 一直係審嗰個。用 <code>/codex:rescue</code> 就可以反過來，由 Claude 派工、Codex 落手：查 bug、試修、接續上一個 Codex 任務，或者用較細嘅模型快手過一次。</p>
@@ -390,6 +463,49 @@
         <p>外掛會由你而家嘅 Claude Code 對話開一個持續嘅 Codex thread，並印出一行 <code>codex resume &lt;session-id&gt;</code> 畀你，照呢行去 Codex 接住做。如果你 Codex 版本太舊、冇 session import 功能，要先升級。</p>
       </div>
       <p>其他管理背景任務嘅指令：<code>/codex:status</code>（睇進度）、<code>/codex:result</code>（睇結果）、<code>/codex:cancel</code>（取消）。</p>
+    </section>
+
+    <section id="dir-b" class="dir-head">
+      <span class="dir-tag">方向 B</span>
+      <h2>Codex 用 Claude：將 Claude Code 當 MCP 工具</h2>
+      <p>Claude Code 本身可以做 MCP server，其他應用接駁到佢就用到 Claude 嘅工具。Codex 有 <code>codex mcp add</code>，所以兩邊駁埋就得。以下指令 2026-11-15 實測跑通。</p>
+      <h3>1. 加入 claude MCP server</h3>
+      <div class="code">
+        <button class="copy" type="button" aria-label="複製指令">複製</button>
+<pre><code>codex mcp add claude -- claude mcp serve</code></pre>
+      </div>
+      <p>成功會見到 <code>Added global MCP server 'claude'</code>。<code>--</code> 後面嗰段係啟動 Claude Code MCP server 嘅指令。</p>
+      <h3>2. 確認有加到</h3>
+      <div class="code">
+        <button class="copy" type="button" aria-label="複製指令">複製</button>
+<pre><code>codex mcp list
+codex mcp get claude</code></pre>
+      </div>
+      <p>實測見到 <code>claude</code> 係 enabled、stdio、command 係 <code>claude</code>、args 係 <code>mcp serve</code>。</p>
+      <h3>3. 用法示例（單次覆寫批准）</h3>
+      <p>喺一個你信任嘅資料夾跑：</p>
+      <div class="code">
+        <button class="copy" type="button" aria-label="複製指令">複製</button>
+<pre><code>codex exec --skip-git-repo-check -c 'mcp_servers.claude.default_tools_approval_mode="approve"' "Use the claude MCP server's tools to list the files in the current directory, then reply with just the file names." &lt;/dev/null</code></pre>
+      </div>
+      <p>點解要加 <code>-c</code>：非互動嘅 <code>codex exec</code> 預設唔准 MCP 工具，實測唔加會見到「MCP tool call requires approval, but approval policy is never」。加咗之後，Codex 用 Claude 嘅 Bash 列出資料夾檔案，成功。</p>
+      <div class="warn" role="alert">
+        <span class="tag">安全警告</span>
+        <p><strong><code>default_tools_approval_mode="approve"</code> 等於畀 Codex 用 Claude 嘅 Bash 等工具，即係畀咗執行權。</strong>只喺你信任嘅資料夾用。</p>
+        <p>用上面嗰種單次 <code>-c</code> 覆寫，唔好寫死入 <code>~/.codex/config.toml</code>；亦唔好同時開 <code>--dangerously-bypass-approvals-and-sandbox</code>。唔想用嘅時候，<code>codex mcp remove claude</code> 就移走。</p>
+      </div>
+      <p><strong>方向 B 官方來源：</strong>Claude Code 文件嘅 <a href="https://code.claude.com/docs/en/mcp#use-claude-code-as-an-mcp-server" rel="noopener" target="_blank">Use Claude Code as an MCP server</a>（原文：「You can use Claude Code itself as an MCP server that other applications can connect to: <code>claude mcp serve</code>」）；Codex 嘅 <a href="https://developers.openai.com/codex/mcp" rel="noopener" target="_blank">MCP 文件</a>（<code>codex mcp add</code> 同 <code>default_tools_approval_mode</code>）。</p>
+    </section>
+
+    <section id="record">
+      <h2>實測紀錄</h2>
+      <p>2026-11-15，喺 macOS 實測，兩個方向都跑通：</p>
+      <table class="rec">
+        <tr><th>方向</th><th>版本</th><th>結果</th></tr>
+        <tr><td>A：Claude 用 Codex</td><td>codex-cli 0.159.2、外掛 codex 1.0.6</td><td>外掛裝好；<code>/codex:setup</code> 顯示 Codex 已就緒、已登入；<code>/codex:review</code> 真係由 Codex 審咗未 commit 改動</td></tr>
+        <tr><td>B：Codex 用 Claude</td><td>codex-cli 0.159.2</td><td><code>codex mcp add</code> 後 <code>codex mcp list</code> 見到 claude；加單次 <code>-c</code> 覆寫後，Codex 用 Claude 嘅 Bash 成功列出檔案（唔加就被擋）</td></tr>
+      </table>
+      <p>Review gate 本次冇開。官方日後可能改指令，以來源頁最新內容為準。</p>
     </section>
 
     <section id="metaphor">
@@ -429,16 +545,31 @@
           <p><code>/codex:review</code> 係一般唯讀審查，唔可以帶自訂重點。<code>/codex:adversarial-review</code> 可以喺後面加重點文字，專登質疑你揀嘅實作同設計取捨。兩個都係唯讀，都唔會改你嘅檔案。</p>
         </div>
       </details>
+      <details>
+        <summary>Codex 用 Claude 安唔安全？</summary>
+        <div class="ans">
+          <p>要睇你點設。Codex 用 Claude 係將 Claude Code 當 MCP server。非互動 <code>codex exec</code> 預設會擋 MCP 工具，要加 <code>default_tools_approval_mode="approve"</code> 先行得，而呢個等於畀 Codex 用 Claude 嘅 Bash 等工具。</p>
+          <p>做法：只喺信任嘅資料夾用、用單次 <code>-c</code> 覆寫、唔寫死入 config、唔開 <code>--dangerously-bypass-approvals-and-sandbox</code>。</p>
+        </div>
+      </details>
+      <details>
+        <summary>兩個方向要唔要同時裝？</summary>
+        <div class="ans">
+          <p>唔使。方向 A 係喺 Claude Code 裝外掛，方向 B 係喺 Codex 加 claude MCP server，兩邊獨立。你想邊個方向就裝邊個；兩邊都想要，就分開做兩次。</p>
+        </div>
+      </details>
     </section>
 
     <section id="sources">
-      <h2>官方來源</h2>
+      <h2>官方來源（兩個方向）</h2>
       <div class="source">
         <ul class="plain">
-          <li>OpenAI 官方 repo 同 README：<a href="https://github.com/openai/codex-plugin-cc" rel="noopener" target="_blank">github.com/openai/codex-plugin-cc</a>（上面每條指令同說明都對照呢份 README）</li>
+          <li>OpenAI 官方 repo 同 README：<a href="https://github.com/openai/codex-plugin-cc" rel="noopener" target="_blank">github.com/openai/codex-plugin-cc</a>（方向 A 每條指令同說明都對照呢份 README）</li>
+          <li>Claude Code 做 MCP server：<a href="https://code.claude.com/docs/en/mcp#use-claude-code-as-an-mcp-server" rel="noopener" target="_blank">code.claude.com/docs/en/mcp</a>（方向 B）</li>
+          <li>Codex MCP 文件：<a href="https://developers.openai.com/codex/mcp" rel="noopener" target="_blank">developers.openai.com/codex/mcp</a>（方向 B；<code>codex mcp add</code>、<code>default_tools_approval_mode</code>）</li>
           <li>Codex 用量同定價：<a href="https://developers.openai.com/codex/pricing" rel="noopener" target="_blank">developers.openai.com/codex/pricing</a></li>
         </ul>
-        <p class="verified"><strong>核實日期：2026-11-15。</strong>官方日後可能更新指令或功能，用之前以 repo 最新 README 為準。</p>
+        <p class="verified"><strong>核實／實測日期：2026-11-15。</strong>官方日後可能更新指令或功能，用之前以 repo 最新 README 為準。</p>
       </div>
     </section>
 
@@ -480,6 +611,36 @@
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallbackCopy(text)); });
       } else { done(fallbackCopy(text)); }
+    });
+  });
+})();
+
+(function () {
+  function fb(pre) {
+    var ta = document.createElement('textarea');
+    ta.value = pre.textContent; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    if (!ok) { var r = document.createRange(); r.selectNodeContents(pre); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); }
+    return ok;
+  }
+  document.querySelectorAll('.bigcopy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var pre = document.getElementById(btn.getAttribute('data-target'));
+      var msg = document.getElementById(btn.getAttribute('data-msg'));
+      var text = pre.textContent;
+      function done(ok) {
+        msg.textContent = ok ? '已複製，貼去你嘅 AI' : '自動複製失敗，已幫你選取全文，請按 Ctrl/Cmd+C';
+        btn.classList.toggle('done', ok);
+        btn.textContent = ok ? '已複製' : '一鍵複製';
+        setTimeout(function () { btn.classList.remove('done'); btn.textContent = '一鍵複製'; }, 3000);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fb(pre)); });
+      } else { done(fb(pre)); }
     });
   });
 })();
