@@ -3,7 +3,7 @@
 ## Project Overview
 山中田 (Yamanakada) — Macau AI information sharing platform. AEO-optimized single-page website on GitHub Pages.
 
-- **Live**: https://inari-kira-isla.github.io/yamanakada/
+- **Live**: https://smartrealm.vercel.app/
 - **llms.txt**: Available at site root
 - **License**: CC BY 4.0
 

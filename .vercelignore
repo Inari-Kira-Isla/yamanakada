@@ -1,0 +1,5 @@
+*.bak*
+.github
+AGENTS.md
+GEMINI.md
+.env*

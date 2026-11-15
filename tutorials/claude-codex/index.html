@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+  <script>/* smartrealm-move */if(/github\.io$/.test(location.hostname)){location.replace('https://smartrealm.vercel.app'+location.pathname.replace(/^\/yamanakada/,'')+location.search+location.hash)}</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>雙AI 教學：Claude 用 Codex，Codex 用 Claude | 靈動智境</title>
   <meta name="description" content="雙向雙AI：Claude Code 叫 Codex 審 code（官方外掛 codex-plugin-cc），Codex 反過來用 Claude Code 做 MCP 工具（codex mcp add）。兩段一鍵複製提示詞，貼畀 AI 自己裝。實測日期 2026-11-15。">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="author" content="Joe｜從事水產貿易嘅建築AI男">
-  <link rel="canonical" href="https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/">
-  <link rel="llms-txt" href="https://inari-kira-isla.github.io/yamanakada/llms.txt">
+  <link rel="canonical" href="https://smartrealm.vercel.app/tutorials/claude-codex/">
+  <link rel="llms-txt" href="https://smartrealm.vercel.app/llms.txt">
 
   <!-- Open Graph -->
   <meta property="og:title" content="雙AI 教學：Claude 用 Codex，Codex 用 Claude">
   <meta property="og:description" content="兩個方向都跑通：Claude 叫 Codex 審 code，Codex 用 Claude 做 MCP 工具。附兩段一鍵複製提示詞同安全警告。2026-11-15 實測。">
-  <meta property="og:image" content="https://inari-kira-isla.github.io/yamanakada/images/og-image.jpg">
+  <meta property="og:image" content="https://smartrealm.vercel.app/images/og-image.jpg">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/">
+  <meta property="og:url" content="https://smartrealm.vercel.app/tutorials/claude-codex/">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:site_name" content="靈動智境人工智能 SMART REALM AI">
   <meta property="article:published_time" content="2026-11-15">
@@ -31,8 +32,8 @@
     "inLanguage": "zh-Hant",
     "datePublished": "2026-11-15",
     "dateModified": "2026-11-15",
-    "image": "https://inari-kira-isla.github.io/yamanakada/images/og-image.jpg",
-    "mainEntityOfPage": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/",
+    "image": "https://smartrealm.vercel.app/images/og-image.jpg",
+    "mainEntityOfPage": "https://smartrealm.vercel.app/tutorials/claude-codex/",
     "author": {
       "@type": "Person",
       "name": "Joe",
@@ -41,7 +42,7 @@
     "publisher": {
       "@type": "Organization",
       "name": "靈動智境人工智能 SMART REALM AI",
-      "url": "https://inari-kira-isla.github.io/yamanakada/"
+      "url": "https://smartrealm.vercel.app/"
     },
     "citation": [
       "https://github.com/openai/codex-plugin-cc",
@@ -70,35 +71,35 @@
         "@type": "HowToStep",
         "position": 1,
         "name": "安裝外掛",
-        "url": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/#step-1",
+        "url": "https://smartrealm.vercel.app/tutorials/claude-codex/#step-1",
         "text": "喺 Claude Code 逐行輸入：/plugin marketplace add openai/codex-plugin-cc，然後 /plugin install codex@openai-codex，最後 /reload-plugins。"
       },
       {
         "@type": "HowToStep",
         "position": 2,
         "name": "執行 /codex:setup 檢查接駁",
-        "url": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/#step-2",
+        "url": "https://smartrealm.vercel.app/tutorials/claude-codex/#step-2",
         "text": "輸入 /codex:setup，檢查 Codex 有冇裝、有冇登入。未登入就輸入 !codex login。"
       },
       {
         "@type": "HowToStep",
         "position": 3,
         "name": "用 /codex:review 叫 Codex 審一次",
-        "url": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/#step-3",
+        "url": "https://smartrealm.vercel.app/tutorials/claude-codex/#step-3",
         "text": "喺 git 專案入面輸入 /codex:review 審未 commit 嘅改動，或者 /codex:review --base main 審分支同 main 嘅差異。呢個指令唯讀，唔會改檔案。"
       },
       {
         "@type": "HowToStep",
         "position": 4,
         "name": "用 /codex:adversarial-review 叫 Codex 唱反調",
-        "url": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/#step-4",
+        "url": "https://smartrealm.vercel.app/tutorials/claude-codex/#step-4",
         "text": "輸入 /codex:adversarial-review，可以喺後面加你想佢集中質疑嘅重點。呢個指令唯讀，唔會修 code。"
       },
       {
         "@type": "HowToStep",
         "position": 5,
         "name": "按需要開啟 review gate（注意額度）",
-        "url": "https://inari-kira-isla.github.io/yamanakada/tutorials/claude-codex/#step-5",
+        "url": "https://smartrealm.vercel.app/tutorials/claude-codex/#step-5",
         "text": "輸入 /codex:setup --enable-review-gate 開啟，/codex:setup --disable-review-gate 關閉。官方警告 review gate 可能形成長時間來回循環，好快食晒用量限額，只喺你打算全程監察時先開。"
       }
     ]
