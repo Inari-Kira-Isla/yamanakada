@@ -37,6 +37,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://smartrealm.vercel.app/tutorials/social-scheduler/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://smartrealm.vercel.app/tutorials/ai-assistant/</loc>
     <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>

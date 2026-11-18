@@ -22,6 +22,7 @@
       "icon": "🤖",
       "description": "Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。",
       "tutorials": [
+        { "title": "社群排程工具教學：一個工具管 5 個平台（免費 vs 付費全比較）", "url": "/tutorials/social-scheduler/", "date": "2026-11-19" },
         { "title": "AI 電郵私人助理設定教學：5 步＋可複製提示詞", "url": "/tutorials/ai-assistant/", "date": "2026-11-16" },
         { "title": "雙AI 教學：Claude 用 Codex，Codex 用 Claude", "url": "/tutorials/claude-codex/", "date": "2026-11-15" }
       ]
