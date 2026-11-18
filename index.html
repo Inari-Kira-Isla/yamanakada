@@ -278,6 +278,16 @@
     .article-item { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: var(--card-bg); border-radius: 10px; border: 1px solid var(--border); margin-bottom: 12px; transition: transform 0.2s; }
     .article-item:hover { transform: translateX(4px); border-color: var(--accent-light); }
     .article-item .title { font-weight: 500; color: var(--text); }
+    /* tutorial categories */
+    .cat-card { display: block; background: var(--card-bg); border: 1px solid var(--border); border-top: 5px solid var(--cat); border-radius: 12px; padding: 24px; color: var(--text); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+    .cat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); text-decoration: none; }
+    .cat-card .icon { font-size: 2rem; margin-bottom: 8px; }
+    .cat-card h3 { font-size: 1.15rem; margin-bottom: 6px; color: var(--cat); }
+    .cat-card p { color: var(--text-light); font-size: 0.92rem; margin-bottom: 12px; }
+    .cat-card .cat-count { display: inline-block; background: var(--cat); color: #fff; font-size: 0.78rem; border-radius: 4px; padding: 0 8px; }
+    .cat-chip { display: inline-block; color: #fff; font-size: 0.72rem; line-height: 1.6; border-radius: 4px; padding: 0 8px; margin-left: 8px; text-decoration: none; white-space: nowrap; }
+    .cat-chip:hover { text-decoration: underline; }
+    .article-item .title-wrap { min-width: 0; }
     .article-item .date { font-size: 0.85rem; color: var(--text-light); white-space: nowrap; margin-left: 16px; }
 
     /* FAQ */
@@ -434,15 +444,49 @@
   </div>
 </div>
 
+<!-- Tutorial categories -->
+<div class="section" id="tutorial-categories">
+  <h2>教學分類</h2>
+  <p class="subtitle">按工作類型揀教學：短片製作、AI 工具、遊戲設計、程式設計</p>
+  <div class="cards">
+<!-- TUTORIAL-CATEGORIES-START -->
+      <a class="cat-card" href="tutorials/film/" style="--cat:#C2410C;--cat-soft:#FFF1E8">
+        <div class="icon">🎬</div>
+        <h3>短片製作</h3>
+        <p>用 AI 一個人做短片：拆參考、鎖角色、生成、剪接、後期，一步步跟住做。</p>
+        <span class="cat-count">2 篇教學</span>
+      </a>
+      <a class="cat-card" href="tutorials/ai-tools/" style="--cat:#4338CA;--cat-soft:#EEF0FF">
+        <div class="icon">🤖</div>
+        <h3>AI 工具</h3>
+        <p>Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。</p>
+        <span class="cat-count">2 篇教學</span>
+      </a>
+      <a class="cat-card" href="tutorials/games/" style="--cat:#7E22CE;--cat-soft:#F6EEFF">
+        <div class="icon">🎮</div>
+        <h3>遊戲設計</h3>
+        <p>用 AI 設計同製作小遊戲：玩法、美術、程式一條龍。</p>
+        <span class="cat-count">準備中，陸續上架</span>
+      </a>
+      <a class="cat-card" href="tutorials/code/" style="--cat:#15803D;--cat-soft:#EAF8EF">
+        <div class="icon">💻</div>
+        <h3>程式設計</h3>
+        <p>用 AI 幫手寫程式、做網站同自動化工具，由零開始。</p>
+        <span class="cat-count">準備中，陸續上架</span>
+      </a>
+      <!-- TUTORIAL-CATEGORIES-END -->
+  </div>
+</div>
+
 <!-- Articles -->
 <div class="section" id="articles">
   <h2>最新文章</h2>
   <p class="subtitle">每週更新，持續為你追蹤 AI 最新動態</p>
   <ul class="article-list" id="articleList">
-    <li class="article-item"><a href="tutorials/macao-cartoon-5-steps/" class="title">一個人用 AI 做 30 秒澳門卡通：5 步製作過程</a><span class="date">2026-11-18</span></li>
-    <li class="article-item"><a href="tutorials/ai-assistant/" class="title">AI 電郵私人助理設定教學：5 步＋可複製提示詞</a><span class="date">2026-11-16</span></li>
-    <li class="article-item"><a href="tutorials/ai-video-toolkit/" class="title">AI 剪片工具清單＋一鍵安裝</a><span class="date">2026-11-16</span></li>
-    <li class="article-item"><a href="tutorials/claude-codex/" class="title">雙AI 教學：Claude 用 Codex，Codex 用 Claude</a><span class="date">2026-11-15</span></li>
+    <li class="article-item"><span class="title-wrap"><a href="tutorials/macao-cartoon-5-steps/" class="title">一個人用 AI 做 30 秒澳門卡通：5 步製作過程</a><a class="cat-chip" href="tutorials/film/" style="background:#C2410C">短片製作</a></span><span class="date">2026-11-18</span></li>
+    <li class="article-item"><span class="title-wrap"><a href="tutorials/ai-assistant/" class="title">AI 電郵私人助理設定教學：5 步＋可複製提示詞</a><a class="cat-chip" href="tutorials/ai-tools/" style="background:#4338CA">AI 工具</a></span><span class="date">2026-11-16</span></li>
+    <li class="article-item"><span class="title-wrap"><a href="tutorials/ai-video-toolkit/" class="title">AI 剪片工具清單＋一鍵安裝</a><a class="cat-chip" href="tutorials/film/" style="background:#C2410C">短片製作</a></span><span class="date">2026-11-16</span></li>
+    <li class="article-item"><span class="title-wrap"><a href="tutorials/claude-codex/" class="title">雙AI 教學：Claude 用 Codex，Codex 用 Claude</a><a class="cat-chip" href="tutorials/ai-tools/" style="background:#4338CA">AI 工具</a></span><span class="date">2026-11-15</span></li>
     <li class="article-item"><a href="articles/2026-03-07_雲端遷移實務中小企業如何安全上雲.html" class="title">雲端遷移實務：中小企業如何安全上雲</a><span class="date">2026-03-07</span></li>
     <li class="article-item"><a href="articles/2026-03-07_ai-客服機器人建置指南從零到上線的完整流程.html" class="title">AI 客服機器人建置指南：從零到上線的完整流程</a><span class="date">2026-03-07</span></li>
     <li class="article-item"><a href="articles/2026-03-07_api-經濟入門如何把你的服務變成可調用的-api.html" class="title">API 經濟入門：如何把你的服務變成可調用的 API</a><span class="date">2026-03-07</span></li>

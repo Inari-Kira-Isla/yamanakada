@@ -1,0 +1,48 @@
+{
+  "_note": "Single source of truth for tutorial categories. Edit here, then run: python3 tools/build_tutorial_hubs.py",
+  "site": "https://smartrealm.vercel.app",
+  "categories": [
+    {
+      "slug": "film",
+      "name": "短片製作",
+      "color": "#C2410C",
+      "color_soft": "#FFF1E8",
+      "icon": "🎬",
+      "description": "用 AI 一個人做短片：拆參考、鎖角色、生成、剪接、後期，一步步跟住做。",
+      "tutorials": [
+        { "title": "一個人用 AI 做 30 秒澳門卡通：5 步製作過程", "url": "/tutorials/macao-cartoon-5-steps/", "date": "2026-11-18" },
+        { "title": "AI 剪片工具清單＋一鍵安裝", "url": "/tutorials/ai-video-toolkit/", "date": "2026-11-16" }
+      ]
+    },
+    {
+      "slug": "ai-tools",
+      "name": "AI 工具",
+      "color": "#4338CA",
+      "color_soft": "#EEF0FF",
+      "icon": "🤖",
+      "description": "Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。",
+      "tutorials": [
+        { "title": "AI 電郵私人助理設定教學：5 步＋可複製提示詞", "url": "/tutorials/ai-assistant/", "date": "2026-11-16" },
+        { "title": "雙AI 教學：Claude 用 Codex，Codex 用 Claude", "url": "/tutorials/claude-codex/", "date": "2026-11-15" }
+      ]
+    },
+    {
+      "slug": "games",
+      "name": "遊戲設計",
+      "color": "#7E22CE",
+      "color_soft": "#F6EEFF",
+      "icon": "🎮",
+      "description": "用 AI 設計同製作小遊戲：玩法、美術、程式一條龍。",
+      "tutorials": []
+    },
+    {
+      "slug": "code",
+      "name": "程式設計",
+      "color": "#15803D",
+      "color_soft": "#EAF8EF",
+      "icon": "💻",
+      "description": "用 AI 幫手寫程式、做網站同自動化工具，由零開始。",
+      "tutorials": []
+    }
+  ]
+}

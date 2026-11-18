@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <script>/* smartrealm-move */if(/github\.io$/.test(location.hostname)){location.replace('https://smartrealm.vercel.app'+location.pathname.replace(/^\/yamanakada/,'')+location.search+location.hash)}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 工具教學 | 靈動智境</title>
+  <meta name="description" content="Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Joe｜建築AI男">
+  <link rel="canonical" href="https://smartrealm.vercel.app/tutorials/ai-tools/">
+  <link rel="llms-txt" href="https://smartrealm.vercel.app/llms.txt">
+  <meta property="og:title" content="AI 工具教學 | 靈動智境">
+  <meta property="og:description" content="Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。">
+  <meta property="og:image" content="https://smartrealm.vercel.app/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://smartrealm.vercel.app/tutorials/ai-tools/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="靈動智境人工智能 SMART REALM AI">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "AI 工具教學",
+    "description": "Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。",
+    "inLanguage": "zh-Hant",
+    "url": "https://smartrealm.vercel.app/tutorials/ai-tools/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "靈動智境人工智能 SMART REALM AI",
+      "url": "https://smartrealm.vercel.app/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AI 電郵私人助理設定教學：5 步＋可複製提示詞",
+          "url": "https://smartrealm.vercel.app/tutorials/ai-assistant/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "雙AI 教學：Claude 用 Codex，Codex 用 Claude",
+          "url": "https://smartrealm.vercel.app/tutorials/claude-codex/"
+        }
+      ]
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --cat: #4338CA; --cat-soft: #EEF0FF; --bg: #fafafa; --text: #1e293b; --text-light: #475569; --card-bg: #ffffff; --border: #e2e8f0; --accent: #6366f1; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; overflow-wrap: anywhere; overflow-x: hidden; }
+    a { color: var(--cat); }
+    nav { background: #fff; border-bottom: 1px solid var(--border); }
+    nav .container { max-width: 1080px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .logo { font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    nav .logo span { color: var(--accent); }
+    nav .back { font-size: 0.9rem; color: var(--text-light); }
+    .hero { background: var(--cat); color: #fff; padding: 48px 16px 40px; }
+    .hero .inner { max-width: 1080px; margin: 0 auto; }
+    .kicker { display: inline-block; border: 1px solid rgba(255,255,255,0.85); border-radius: 4px; padding: 2px 10px; font-size: 0.8rem; letter-spacing: 0.08em; margin-bottom: 18px; }
+    .hero h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.35; margin-bottom: 12px; }
+    .hero .lead { font-size: 1.05rem; max-width: 640px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 16px 64px; }
+    .wrap h2 { font-size: 1.3rem; margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .tcard { display: block; background: var(--card-bg); border: 1px solid var(--border); border-top: 4px solid var(--cat); border-radius: 12px; padding: 22px; text-decoration: none; color: var(--text); transition: transform .2s, box-shadow .2s; }
+    .tcard:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .tcard .tag { display: inline-block; background: var(--cat); color: #fff; font-size: 0.75rem; border-radius: 4px; padding: 0 8px; margin-bottom: 10px; }
+    .tcard h3 { font-size: 1.05rem; line-height: 1.5; margin-bottom: 8px; }
+    .tcard .date { font-size: 0.85rem; color: var(--text-light); }
+    .btn { display: inline-block; background: var(--cat); color: #fff; text-decoration: none; border-radius: 8px; padding: 10px 20px; font-weight: 700; margin-top: 8px; }
+    .btn:hover { text-decoration: underline; }
+    .empty { background: var(--cat-soft); border: 1px dashed var(--cat); border-radius: 12px; padding: 40px 20px; text-align: center; }
+    .empty p { font-size: 1.1rem; margin-bottom: 12px; }
+    .others { margin-top: 48px; }
+    .others a { display: inline-block; margin: 0 8px 8px 0; padding: 4px 14px; border-radius: 999px; border: 1px solid var(--border); background: #fff; text-decoration: none; font-size: 0.9rem; }
+    footer { text-align: center; padding: 24px 16px; font-size: 0.85rem; color: var(--text-light); border-top: 1px solid var(--border); }
+    @media (max-width: 600px) { .hero h1 { font-size: 1.5rem; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="logo" href="../../">靈動智<span>境</span> AI</a>
+    <a class="back" href="../../#tutorial-categories">&larr; 返回教學分類</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <span class="kicker">🤖 教學分類</span>
+    <h1>AI 工具教學</h1>
+    <p class="lead">Claude、Codex 等 AI 工具嘅實用設定：唔使寫程式，每步有可複製提示詞。</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>AI 工具　共 2 篇</h2>
+  <div class="grid">
+    <a class="tcard" href="/tutorials/ai-assistant/"><span class="tag">AI 工具</span><h3>AI 電郵私人助理設定教學：5 步＋可複製提示詞</h3><span class="date">2026-11-16</span></a>
+    <a class="tcard" href="/tutorials/claude-codex/"><span class="tag">AI 工具</span><h3>雙AI 教學：Claude 用 Codex，Codex 用 Claude</h3><span class="date">2026-11-15</span></a>
+  </div>
+  <div class="others">
+    <p style="margin-bottom:8px;color:var(--text-light)">其他分類</p>
+    <a href="../film/" style="color:#C2410C">🎬 短片製作</a>
+    <a href="../games/" style="color:#7E22CE">🎮 遊戲設計</a>
+    <a href="../code/" style="color:#15803D">💻 程式設計</a>
+  </div>
+</main>
+
+<footer>
+  <p>靈動智境人工智能 SMART REALM AI · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+<img src="https://client-ai-tracker.inariglobal.workers.dev/yamanakada/pixel.gif?p=/tutorials/ai-tools/" width="1" height="1" alt="" loading="eager" style="position:absolute;left:-9999px">
+</body>
+</html>

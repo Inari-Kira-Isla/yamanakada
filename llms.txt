@@ -6,6 +6,8 @@
 
 https://smartrealm.vercel.app/
 https://smartrealm.vercel.app/services
+https://smartrealm.vercel.app/tutorials/film/
+https://smartrealm.vercel.app/tutorials/ai-tools/
 https://smartrealm.vercel.app/tutorials/claude-codex/
 https://smartrealm.vercel.app/tutorials/ai-assistant/
 https://smartrealm.vercel.app/tutorials/ai-video-toolkit/
