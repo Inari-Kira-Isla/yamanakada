@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <script>/* smartrealm-move */if(/github\.io$/.test(location.hostname)){location.replace('https://smartrealm.vercel.app'+location.pathname.replace(/^\/yamanakada/,'')+location.search+location.hash)}</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一個人用 AI 做 30 秒澳門卡通：5 步製作過程 | 靈動智境</title>
+  <meta name="description" content="一個人用 AI 做 30 秒澳門滑板卡通，分 5 步：拆參考片寫劇本、鎖死角色同場景、像素預演定鏡頭、Lovart 一條過生成、後期跟拍子。附封面唔滿意點樣直接講到改好。資料查核日期 2026-11-18。">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Joe｜建築AI男">
+  <link rel="canonical" href="https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/">
+  <link rel="llms-txt" href="https://smartrealm.vercel.app/llms.txt">
+
+  <meta property="og:title" content="一個人用 AI 做 30 秒澳門卡通：5 步製作過程">
+  <meta property="og:description" content="拆參考、鎖角色、像素預演、一條過生成、後期跟拍子。每步有圖、有做法。">
+  <meta property="og:image" content="https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/img/cover-final.webp">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:site_name" content="靈動智境人工智能 SMART REALM AI">
+  <meta property="article:published_time" content="2026-11-18">
+  <meta property="article:author" content="Joe｜建築AI男">
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "一個人用 AI 做 30 秒澳門卡通：5 步製作過程",
+  "description": "一個人用 AI 做 30 秒澳門卡通《MACAO GLIDE》嘅 5 步製作過程：拆參考、鎖角色、像素預演、一條過生成、後期。",
+  "inLanguage": "zh-Hant",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-18",
+  "image": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/img/cover-final.webp",
+  "mainEntityOfPage": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/",
+  "author": {
+    "@type": "Person",
+    "name": "Joe",
+    "description": "建築AI男"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "靈動智境人工智能 SMART REALM AI",
+    "url": "https://smartrealm.vercel.app/"
+  }
+}
+  </script>
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "點樣一個人用 AI 做 30 秒澳門卡通（5 步）",
+  "description": "拆參考片、鎖死角色同場景、像素預演定鏡頭、將預演片當參考用 Lovart 一條過生成 30 秒，再後期跟拍子加特效。",
+  "inLanguage": "zh-Hant",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "拆參考片＋寫劇本",
+      "url": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/#step-1",
+      "text": "揀一條你想學節奏嘅參考片，逐個鏡頭數：今次拆出 29 個鏡，鏡長中位數 1.8 秒、平均 2.07 秒，即係差唔多 2 秒轉一個鏡。 跟住呢個節奏寫劇本：30 秒大約要幾多個鏡，一早就知道。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "鎖死角色同場景",
+      "url": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/#step-2",
+      "text": "角色：女主出 5 個角度（正面、斜側、側面、背面、面部特寫）；黑貓出 6 個角度（正面、斜側、側面、背面、面部、跳躍）。 滑板出一張板面＋側面圖；場景出幾張暖光場景卡（今次有舊街、玫瑰聖母堂兩個角度、議事亭前地、大三巴）。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "像素預演定鏡頭",
+      "url": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/#step-3",
+      "text": "用像素公仔（簡單 3D 白模）將全片行一次，輸出一條預演片。 喺預演入面先定死三樣：鏡頭（遠近、角度、運動）、走位（女仔同貓幾時喺邊）、招式（第 1 步設計嗰 8 招幾時出現）。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "預演片當參考，一條過生成 30 秒",
+      "url": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/#step-4",
+      "text": "將第 3 步嘅預演片當參考影片，連同第 2 步嘅角色圖、貓圖、場景卡，一齊放入 Lovart。 一次過生成 30 秒，唔好拆好多段。今次生成一次用咗 600 點（Lovart 一次任務嘅紀錄）。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "後期跟拍子：波點特效、地點牌、貓叫聲",
+      "url": "https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/#step-5",
+      "text": "跟住音樂拍子加特效：今次將女主變成彩色波點。 加地點牌，睇片嘅人一眼知係澳門邊個景點。"
+    }
+  ]
+}
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "要識寫程式嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "唔使。成個流程係生成圖、整預演片、放入 Lovart 生成，再做後期剪輯。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "點解要先做像素預演？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "因為鏡頭、走位、招式喺預演入面改最平；之後將預演片當參考影片放入 Lovart，一條過生成 30 秒，唔使靠抽卡。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "成條片用咗幾多點數？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "今次最後生成一次用咗 600 點（Lovart 任務紀錄）。點數同價錢按你嘅方案而定，以 Lovart 畫面為準。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "角色變樣點算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "返去第 2 步重出有問題嘅角度，逐張數清楚（例如貓仔要四隻腳一條尾）再重新生成，唔好帶住問題入下一步。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "封面唔滿意可以點？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "直接用一句講出問題：今次封面太平淡，叫 AI 重新打過黃昏斜陽光，由第一版變到有層次、有光影嘅版本。"
+      }
+    }
+  ]
+}
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #6366f1;
+      --bg: #fafafa;
+      --text: #1e293b;
+      --text-light: #64748b;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --navy: #17243A;
+      --navy-2: #22344f;
+      --amber: #F2A33A;
+      --amber-bg: #fff6e6;
+      --cyan: #5FD0E0;
+      --cyan-dark: #0b7285;
+      --red: #b42318;
+      --red-bg: #fdecea;
+      --green: #1a7f4b;
+      --green-bg: #e8f6ee;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 110px; }
+    body { font-family: 'Noto Sans TC', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.85; overflow-wrap: anywhere; overflow-x: hidden; }
+    a { color: var(--cyan-dark); }
+    a:hover { text-decoration: underline; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; background: #eef2f6; color: var(--navy); padding: 1px 6px; border-radius: 4px; }
+
+    nav { background: #fff; border-bottom: 1px solid var(--border); }
+    nav .container { max-width: 1080px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; height: 56px; }
+    nav .logo { font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+    nav .logo span { color: var(--accent); }
+    nav .back { font-size: 0.9rem; color: var(--text-light); }
+
+    .hero { background-color: var(--navy);
+      background-image: linear-gradient(rgba(95,208,224,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(95,208,224,0.10) 1px, transparent 1px);
+      background-size: 32px 32px; color: #fff; padding: 48px 16px 40px; border-bottom: 4px solid var(--amber); }
+    .hero .inner { max-width: 760px; margin: 0 auto; }
+    .kicker { display: inline-block; color: var(--cyan); border: 1px solid var(--cyan); border-radius: 4px; padding: 2px 10px; font-size: 0.8rem; letter-spacing: 0.08em; margin-bottom: 18px; }
+    .hero h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.35; margin-bottom: 18px; }
+    .hero h1 em { font-style: normal; color: var(--amber); }
+    .hero .lead { font-size: 1.05rem; color: #dbe6f3; margin-bottom: 18px; }
+    .hero .byline { font-size: 0.85rem; color: #9fb3cc; }
+    .hero .byline strong { color: #fff; font-weight: 500; }
+
+    /* 進度導航（同片右側設定面板一致） */
+    .wizard { position: sticky; top: 0; z-index: 90; background: var(--navy); border-bottom: 2px solid var(--amber); }
+    .wizard .in { max-width: 760px; margin: 0 auto; padding: 8px 16px 10px; }
+    .wizard .top { display: flex; justify-content: space-between; align-items: baseline; color: #fff; font-size: 0.85rem; margin-bottom: 6px; }
+    .wizard .top b { color: var(--amber); font-size: 1rem; }
+    .wizard ol { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .wizard a { display: block; text-align: center; text-decoration: none; background: rgba(255,255,255,0.10); color: #b9c8dc; border-radius: 6px; padding: 4px 2px; font-size: 0.72rem; line-height: 1.35; border: 1px solid transparent; min-height: 44px; }
+    .wizard a b { display: block; font-size: 0.78rem; }
+    .wizard a.on { border-color: var(--cyan); color: #fff; }
+    .wizard a.done { background: var(--amber); color: var(--navy); font-weight: 700; }
+    .wizard a.done b::after { content: ' ✓'; }
+
+    .preview { background: var(--amber-bg); border-bottom: 1px solid var(--amber); padding: 14px 16px; }
+    .preview .pin { max-width: 760px; margin: 0 auto; color: #4a3510; }
+    .preview b { color: #7a4a00; }
+    .preview ul { list-style: none; margin-top: 6px; }
+    .preview li { font-size: 0.92rem; line-height: 1.6; margin-bottom: 4px; }
+    .preview li span { display: inline-block; background: var(--navy); color: var(--amber); font-weight: 700; font-size: 0.78rem; border-radius: 4px; padding: 0 8px; margin-right: 8px; }
+    .lab.after { background: var(--green-bg); color: var(--green); }
+    .after-line { margin-top: 8px; padding: 8px 12px; background: var(--green-bg); border-radius: 8px; color: #14532d; font-size: 0.93rem; }
+    main { max-width: 760px; margin: 0 auto; padding: 0 16px 24px; }
+    section { padding-top: 40px; }
+    h2 { font-size: 1.4rem; font-weight: 700; line-height: 1.4; color: var(--navy); margin-bottom: 14px; }
+    h3 { font-size: 1.05rem; margin: 22px 0 8px; color: var(--navy); }
+    p { margin-bottom: 14px; }
+    ul.plain, ol.plain { margin: 8px 0 16px 22px; }
+    ul.plain li, ol.plain li { margin-bottom: 8px; }
+
+    .checklist { list-style: none; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 8px 18px; }
+    .checklist li { position: relative; padding: 12px 0 12px 34px; border-bottom: 1px solid var(--border); }
+    .checklist li:last-child { border-bottom: 0; }
+    .checklist li::before { content: ''; position: absolute; left: 4px; top: 19px; width: 14px; height: 8px; border-left: 3px solid var(--cyan-dark); border-bottom: 3px solid var(--cyan-dark); transform: rotate(-45deg); }
+    .checklist b { color: var(--navy); }
+
+    .note { background: #eef6f8; border-left: 4px solid var(--cyan-dark); border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 16px 0; }
+    .note p:last-child { margin-bottom: 0; }
+    .warn { background: var(--amber-bg); border: 2px solid var(--amber); border-radius: 12px; padding: 18px 18px 6px; margin: 18px 0; }
+    .warn .tag { display: inline-block; background: var(--amber); color: var(--navy); font-weight: 900; font-size: 0.9rem; padding: 2px 12px; border-radius: 4px; margin-bottom: 10px; }
+    .warn p, .warn li { color: #4a3510; }
+    .warn strong { color: #7a4a00; }
+
+    .principle { background: var(--navy); color: #e8f0f8; border-radius: 12px; padding: 20px 18px; margin: 18px 0; }
+    .principle b { color: var(--amber); }
+
+    /* 步驟卡 */
+    .scard { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px 20px; margin-top: 28px; box-shadow: 0 1px 3px rgba(23,36,58,0.06); }
+    .step-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .step-no { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--amber); font-weight: 900; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
+    .step-head h2 { margin: 0; font-size: 1.25rem; }
+    .step-head .sub { display: block; font-size: 0.88rem; font-weight: 400; color: var(--text-light); margin-top: 2px; }
+    .seg { margin-top: 16px; }
+    .seg > .lab { display: inline-block; font-size: 0.8rem; font-weight: 900; border-radius: 4px; padding: 1px 10px; margin-bottom: 8px; }
+    .lab.bad { background: var(--red-bg); color: var(--red); }
+    .lab.how { background: #e3eefc; color: #1d4e9e; }
+    .lab.cp { background: var(--amber); color: var(--navy); }
+    .lab.ok { background: var(--green-bg); color: var(--green); }
+
+    .qcard { background: var(--navy); border-radius: 12px; padding: 14px; margin: 6px 0 4px; border-left: 4px solid var(--amber); }
+    .qcard pre { margin: 0 0 12px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; background: transparent; }
+    .qcard pre code { background: transparent; color: #e8f4fa; padding: 0; font-size: 0.86rem; line-height: 1.75; display: block; }
+    .qcard pre:focus { outline: 2px solid var(--cyan); outline-offset: 4px; }
+    .bigcopy { display: block; width: 100%; min-height: 48px; background: var(--amber); color: var(--navy); border: 0; border-radius: 10px; font: inherit; font-weight: 900; font-size: 1.05rem; cursor: pointer; }
+    .bigcopy:hover { filter: brightness(1.08); }
+    .bigcopy.done { background: var(--cyan); }
+    .qmsg { min-height: 1.5em; margin: 6px 0 0; font-size: 0.88rem; color: var(--cyan); }
+
+    .donebtn { display: block; width: 100%; min-height: 44px; margin-top: 18px; background: #fff; border: 2px solid var(--navy); color: var(--navy); border-radius: 10px; font: inherit; font-weight: 700; cursor: pointer; }
+    .donebtn[aria-pressed="true"] { background: var(--navy); color: var(--amber); }
+
+    table.rec { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 0.9rem; }
+    table.rec th, table.rec td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; background: #fff; vertical-align: top; }
+    table.rec th { background: #eef2f6; color: var(--navy); }
+    table.perm td:first-child { white-space: nowrap; font-weight: 900; }
+    table.perm tr.t1 td:first-child { background: var(--green-bg); color: var(--green); }
+    table.perm tr.t2 td:first-child { background: var(--amber-bg); color: #7a4a00; }
+    table.perm tr.t3 td:first-child { background: var(--red-bg); color: var(--red); }
+    table.perm td:nth-child(2) { min-width: 7.5em; }
+    .tablewrap { overflow-x: auto; }
+
+    .ladder { list-style: none; border-left: 4px solid var(--amber); margin: 12px 0 16px 6px; padding-left: 16px; }
+    .ladder li { margin-bottom: 12px; }
+    .ladder b { color: var(--navy); }
+
+    /* 片尾清單卡 */
+    .endcard { background: var(--navy); color: #fff; border: 3px solid var(--amber); border-radius: 16px; padding: 20px 16px; margin-top: 12px; }
+    .endcard h2 { color: var(--amber); font-size: 1.25rem; text-align: center; }
+    .endcard ol { list-style: none; counter-reset: s; }
+    .endcard li { counter-increment: s; position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid rgba(255,255,255,0.15); font-size: 0.95rem; line-height: 1.6; }
+    .endcard li:last-child { border-bottom: 0; }
+    .endcard li::before { content: counter(s); position: absolute; left: 0; top: 10px; width: 32px; height: 32px; border-radius: 50%; background: var(--amber); color: var(--navy); font-weight: 900; display: flex; align-items: center; justify-content: center; }
+    .endcard li b { color: var(--amber); }
+    .endcard li span { color: #cfdcec; }
+    .endcard .foot { text-align: center; color: var(--cyan); font-size: 0.85rem; margin: 12px 0 0; }
+
+    details { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; margin: 10px 0; }
+    summary { cursor: pointer; font-weight: 700; color: var(--navy); }
+    details p { margin: 10px 0 0; }
+
+    footer { background: var(--navy); color: #cfdcec; text-align: center; padding: 32px 16px; margin-top: 48px; font-size: 0.88rem; }
+    footer h4 { color: #fff; margin-bottom: 6px; }
+    footer a { color: var(--cyan); }
+    footer p { margin-bottom: 6px; }
+    .navlinks { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+    .navlinks a { display: inline-block; min-height: 44px; line-height: 44px; padding: 0 16px; border: 2px solid var(--navy); border-radius: 10px; font-weight: 700; color: var(--navy); text-decoration: none; background: #fff; }
+
+    @media (min-width: 769px) {
+      .hero { padding: 72px 24px 56px; }
+      .hero h1 { font-size: 2.5rem; }
+      main { padding: 0 24px 24px; }
+      nav .container { padding: 0 24px; }
+      .wizard a { font-size: 0.85rem; }
+      .scard { padding: 24px 24px 26px; }
+    }
+    figure { margin: 14px 0 6px; }
+    figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border); background: #fff; }
+    figcaption { font-size: 0.82rem; color: var(--text-light); margin-top: 6px; line-height: 1.6; }
+    .seg ul.plain li, .seg ol.plain li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="logo" href="../../">靈動智<span>境</span> AI</a>
+    <a class="back" href="../../#articles">&larr; 返回教學列表</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="inner">
+    <span class="kicker">AI 動畫製作 · 5 步流程</span>
+    <h1>一個人用 AI 做 <em>30 秒澳門卡通</em></h1>
+    <p class="lead">睇完製作短片想知詳細做法？呢頁將《MACAO GLIDE》（澳門滑板少女＋黑貓）嘅 5 步製作過程逐步拆開：拆參考、鎖角色、像素預演、一條過生成、後期。每步有畫面同做法，你可以跟住試。</p>
+    <p class="byline">作者 <strong>Joe｜建築AI男</strong> · 資料查核日期 2026-11-18 · 本頁所有數字來自《MACAO GLIDE》專案紀錄</p>
+  </div>
+</header>
+
+<div class="wizard" aria-label="5 步進度">
+  <div class="in">
+    <div class="top"><span>製作進度（已完成）</span><b id="prog">0/5</b></div>
+    <ol>
+      <li><a href="#step-1" data-s="1" class="on"><b>1/5</b>拆參考</a></li>
+      <li><a href="#step-2" data-s="2"><b>2/5</b>鎖角色</a></li>
+      <li><a href="#step-3" data-s="3"><b>3/5</b>預演</a></li>
+      <li><a href="#step-4" data-s="4"><b>4/5</b>生成</a></li>
+      <li><a href="#step-5" data-s="5"><b>5/5</b>後期</a></li>
+    </ol>
+  </div>
+</div>
+
+<main>
+  <article>
+    <section id="before">
+      <h2>先睇成品：你做緊嘅係咩</h2>
+      <p>《MACAO GLIDE》係一條 30 秒、16:9 嘅澳門滑板卡通：一個戴頭盔嘅女仔，同一隻黑貓，喺澳門街景同大三巴一帶滑板。整條片由一個人用 AI 完成。下面係最終封面。</p>
+      <figure><img src="img/cover-final.webp" width="1200" height="675" alt="MACAO GLIDE 最終封面：卡通滑板少女喺大三巴前石階欄杆滑行，黑貓喺旁邊跑，黃昏暖光" loading="eager"><figcaption>最終封面（黃昏暖光版）。</figcaption></figure>
+      <div class="principle"><p style="margin-bottom:0"><b>一句講晒個思路：</b>先將所有嘢「鎖死」，再生成。角色、場景、鏡頭、招式都喺 AI 出片之前決定好，AI 淨係負責將佢哋變成動畫。</p></div>
+    </section>
+
+    <section id="step-1" class="scard">
+      <div class="step-head">
+        <span class="step-no">1</span>
+        <h2>拆參考片＋寫劇本<span class="sub">先數清楚個節奏，再設計滑板招式</span></h2>
+      </div>
+      <figure><img src="img/step1.webp" width="800" height="711" alt="第 1 步畫面：參考片數出 29 個鏡，平均約 2 秒一鏡" loading="lazy"></figure>
+      <div class="seg"><span class="lab bad">冇做會點</span>
+        <p>AI 影片最易死喺「冇節奏」：你淨係叫佢「做條滑板卡通」，出嚟嘅鏡頭長短亂晒，又唔知邊度要有招式。</p>
+      </div>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>揀一條你想學節奏嘅參考片，逐個鏡頭數：今次拆出 <b>29 個鏡</b>，鏡長中位數 1.8 秒、平均 2.07 秒，即係差唔多 <b>2 秒轉一個鏡</b>。</li>
+          <li>跟住呢個節奏寫劇本：30 秒大約要幾多個鏡，一早就知道。</li>
+          <li>滑板招式唔好臨場再諗，今次喺劇本入面一次過設計好 <b>8 招滑板動作</b>，每招對返邊個鏡。</li>
+          <li>只學節奏同結構，唔好照抄參考片嘅畫面。</li>
+        </ol>
+      </div>
+      <div class="seg"><span class="lab ok">點驗收</span>
+        <p>你有一張表：總共幾個鏡、每鏡幾秒、邊個鏡做邊招。</p>
+      </div>
+      <button class="donebtn" type="button" data-done="1" aria-pressed="false">我完成咗第 1 步</button>
+    </section>
+
+    <section id="step-2" class="scard">
+      <div class="step-head">
+        <span class="step-no">2</span>
+        <h2>鎖死角色同場景<span class="sub">先出齊參考圖，之後每個鏡都用同一套</span></h2>
+      </div>
+      <figure><img src="img/step2-lock.webp" width="800" height="711" alt="角色同場景鎖定總覽：女主 5 個角度、黑貓 6 個角度、滑板圖同 5 張暖光場景卡" loading="lazy"></figure>
+      <div class="seg"><span class="lab bad">冇做會點</span>
+        <p>唔鎖死嘅話，每個鏡出嚟個女仔、隻貓、街景都唔同，成條片似拼湊出嚟。</p>
+      </div>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>角色：女主出 <b>5 個角度</b>（正面、斜側、側面、背面、面部特寫）；黑貓出 <b>6 個角度</b>（正面、斜側、側面、背面、面部、跳躍）。</li>
+          <li>滑板出一張板面＋側面圖；場景出幾張<b>暖光場景卡</b>（今次有舊街、玫瑰聖母堂兩個角度、議事亭前地、大三巴）。</li>
+          <li>生成之後逐張數清楚：<b>貓仔要四隻腳一條尾</b>，女仔手腳數量、衫同護膝都要對。數錯就重出，唔好帶住問題入下一步。</li>
+          <li>全部圖用同一個光線方向（暖光），之後影片先唔會一鏡日、一鏡夜。</li>
+        </ol>
+      </div>
+      <div class="seg"><span class="lab ok">點驗收</span>
+        <p>18 張鎖定圖（女主 5＋黑貓 6＋滑板＋場景）全部過咗檢查先入下一步。</p>
+      </div>
+      <button class="donebtn" type="button" data-done="2" aria-pressed="false">我完成咗第 2 步</button>
+    </section>
+
+    <section id="step-3" class="scard">
+      <div class="step-head">
+        <span class="step-no">3</span>
+        <h2>像素預演定鏡頭<span class="sub">用簡單像素公仔先行一次，免得燒 AI 點數抽卡</span></h2>
+      </div>
+      <figure><img src="img/step3.webp" width="800" height="711" alt="第 3 步畫面：右邊係像素預演，左邊係對應嘅 AI 成片，鏡頭走位一致" loading="lazy"></figure>
+      <div class="seg"><span class="lab bad">冇做會點</span>
+        <p>直接叫 AI 生成，每次鏡頭、走位、招式都靠運氣，抽到啱先算，好貴亦好慢。</p>
+      </div>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>用像素公仔（簡單 3D 白模）將全片行一次，輸出一條<b>預演片</b>。</li>
+          <li>喺預演入面先定死三樣：<b>鏡頭</b>（遠近、角度、運動）、<b>走位</b>（女仔同貓幾時喺邊）、<b>招式</b>（第 1 步設計嗰 8 招幾時出現）。</li>
+          <li>預演唔靚都冇所謂，要睇嘅係節奏同構圖啱唔啱；有問題喺呢度改，成本最平。</li>
+        </ol>
+      </div>
+      <div class="seg"><span class="lab ok">點驗收</span>
+        <p>你有一條同成片一樣長嘅預演片，睇完冇再想改嘅鏡頭。</p>
+      </div>
+      <button class="donebtn" type="button" data-done="3" aria-pressed="false">我完成咗第 3 步</button>
+    </section>
+
+    <section id="step-4" class="scard">
+      <div class="step-head">
+        <span class="step-no">4</span>
+        <h2>預演片當參考，一條過生成 30 秒<span class="sub">將預演片同鎖定圖一齊餵入 Lovart</span></h2>
+      </div>
+      <figure><img src="img/step4.webp" width="800" height="711" alt="第 4 步畫面：Lovart 生成嘅原片，場景係議事亭前地一帶嘅葡式街景" loading="lazy"></figure>
+      <div class="seg"><span class="lab bad">冇做會點</span>
+        <p>逐個鏡頭分開生成再駁，接位好易唔連貫；今次嘅做法係一次生成成條 30 秒。</p>
+      </div>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>將第 3 步嘅<b>預演片</b>當參考影片，連同第 2 步嘅角色圖、貓圖、場景卡，一齊放入 Lovart。</li>
+          <li>一次過生成 <b>30 秒</b>，唔好拆好多段。今次生成一次用咗 <b>600 點</b>（Lovart 一次任務嘅紀錄）。</li>
+          <li>出片後對返第 1 步嘅鏡頭表同第 3 步嘅預演：招式、走位、貓有冇走樣。</li>
+        </ol>
+      </div>
+      <div class="seg"><span class="lab ok">點驗收</span>
+        <p>有一條 30 秒原片，大致跟住預演嘅鏡頭同走位。</p>
+      </div>
+      <button class="donebtn" type="button" data-done="4" aria-pressed="false">我完成咗第 4 步</button>
+    </section>
+
+    <section id="step-5" class="scard">
+      <div class="step-head">
+        <span class="step-no">5</span>
+        <h2>後期跟拍子：波點特效、地點牌、貓叫聲<span class="sub">將生成原片剪成有節奏、有資訊嘅成片</span></h2>
+      </div>
+      <figure><img src="img/step5.webp" width="800" height="711" alt="第 5 步畫面：左邊係加咗後期嘅版本，右邊係生成原片" loading="lazy"></figure>
+      <div class="seg"><span class="lab bad">冇做會點</span>
+        <p>原片只係「識郁」。後期先令佢有節奏、有記憶點。</p>
+      </div>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>跟住音樂拍子加特效：今次將女主變成<b>彩色波點</b>。</li>
+          <li>加<b>地點牌</b>，睇片嘅人一眼知係澳門邊個景點。</li>
+          <li>加<b>貓叫聲</b>：今次貓叫聲係合成出嚟，同畫面對準先自然。</li>
+          
+        </ol>
+      </div>
+      <div class="seg"><span class="lab ok">點驗收</span>
+        <p>成片嘅特效、字牌、聲音都落喺拍子上。</p>
+      </div>
+      <button class="donebtn" type="button" data-done="5" aria-pressed="false">我完成咗第 5 步</button>
+    </section>
+
+    <section id="redo" class="scard">
+      <div class="step-head">
+        <span class="step-no" style="font-size:1rem">改</span>
+        <h2>唔滿意？直接講<span class="sub">封面太平淡，就重新打過黃昏斜陽光</span></h2>
+      </div>
+      <figure><img src="img/cover-before-after.webp" width="1920" height="540" alt="封面前後對比：左邊係第一版，色調偏平；右邊係黃昏斜陽重新打光後，石階有長影、建築有暖色高光" loading="lazy"><figcaption>左：第一版（太平淡）；右：重新打光後嘅黃昏斜陽版。人物、構圖、標題冇變，只改光線。</figcaption></figure>
+      <div class="seg"><span class="lab how">點做</span>
+        <ol class="plain">
+          <li>用一句話講出問題，例如「封面太平淡」，唔使寫成技術術語。</li>
+          <li>講明想要嘅光線方向：今次叫佢「重新打過黃昏斜陽光」。</li>
+          <li>叫佢<b>只改光線</b>，人物、構圖、標題保持不變，改完逐樣對返。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="checklist">
+      <h2>5 步清單</h2>
+      <ul class="checklist">
+        <li><b>拆參考片＋寫劇本</b>：數清楚鏡數同每鏡時間，設計好招式。</li>
+        <li><b>鎖死角色同場景</b>：角色多角度圖、暖光場景卡，數清楚手腳尾巴。</li>
+        <li><b>像素預演</b>：鏡頭、走位、招式先定死。</li>
+        <li><b>預演片當參考，一條過生成 30 秒</b>。</li>
+        <li><b>後期跟拍子</b>：特效、地點牌、貓叫聲；唔滿意就直接講，改光線唔改其他。</li>
+      </ul>
+    </section>
+
+    <section id="faq">
+      <h2>常見問題</h2>
+
+      <details><summary>要識寫程式嗎？</summary><p>唔使。成個流程係生成圖、整預演片、放入 Lovart 生成，再做後期剪輯。</p></details>
+
+      <details><summary>點解要先做像素預演？</summary><p>因為鏡頭、走位、招式喺預演入面改最平；之後將預演片當參考影片放入 Lovart，一條過生成 30 秒，唔使靠抽卡。</p></details>
+
+      <details><summary>成條片用咗幾多點數？</summary><p>今次最後生成一次用咗 600 點（Lovart 任務紀錄）。點數同價錢按你嘅方案而定，以 Lovart 畫面為準。</p></details>
+
+      <details><summary>角色變樣點算？</summary><p>返去第 2 步重出有問題嘅角度，逐張數清楚（例如貓仔要四隻腳一條尾）再重新生成，唔好帶住問題入下一步。</p></details>
+
+      <details><summary>封面唔滿意可以點？</summary><p>直接用一句講出問題：今次封面太平淡，叫 AI 重新打過黃昏斜陽光，由第一版變到有層次、有光影嘅版本。</p></details>
+
+      <div class="navlinks">
+        <a href="../../#articles">&larr; 返回教學列表</a>
+        <a href="../../">返回首頁</a>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <h4>靈動智境人工智能 SMART REALM AI</h4>
+  <p>澳門 AI 科技顧問公司 | Macau AI Technology Consulting</p>
+  <p>
+    <a href="../../">首頁</a> ·
+    <a href="../../llms.txt">llms.txt</a> ·
+    <a href="../../sitemap.xml">Sitemap</a> ·
+    <a href="../../robots.txt">Robots</a>
+  </p>
+  <p>&copy; 2026 靈動智境 · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</footer>
+
+
+<script>
+(function () {
+  var done = {}, prog = document.getElementById('prog');
+  var links = document.querySelectorAll('.wizard a[data-s]');
+  function paint() {
+    var n = 0;
+    links.forEach(function (a) {
+      var s = a.getAttribute('data-s');
+      a.classList.toggle('done', !!done[s]);
+      if (done[s]) n++;
+    });
+    prog.textContent = n + '/5';
+  }
+  document.querySelectorAll('.donebtn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var s = b.getAttribute('data-done');
+      done[s] = !done[s];
+      b.setAttribute('aria-pressed', done[s] ? 'true' : 'false');
+      b.textContent = done[s] ? '已完成第 ' + s + ' 步（撳多次取消）' : '我完成咗第 ' + s + ' 步';
+      paint();
+    });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) {
+          var id = e.target.id.replace('step-', '');
+          links.forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-s') === id); });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('section.scard[id^="step-"]').forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+<img src="https://client-ai-tracker.inariglobal.workers.dev/yamanakada/pixel.gif?p=/tutorials/macao-cartoon-5-steps/" width="1" height="1" alt="" loading="eager" style="position:absolute;left:-9999px">
+</body>
+</html>

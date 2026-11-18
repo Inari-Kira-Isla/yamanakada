@@ -9,3 +9,4 @@ https://smartrealm.vercel.app/services
 https://smartrealm.vercel.app/tutorials/claude-codex/
 https://smartrealm.vercel.app/tutorials/ai-assistant/
 https://smartrealm.vercel.app/tutorials/ai-video-toolkit/
+https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/
