@@ -13,3 +13,4 @@ https://smartrealm.vercel.app/tutorials/social-scheduler/
 https://smartrealm.vercel.app/tutorials/ai-assistant/
 https://smartrealm.vercel.app/tutorials/ai-video-toolkit/
 https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/
+https://smartrealm.vercel.app/tutorials/ai-brand-film/
