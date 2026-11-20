@@ -14,3 +14,4 @@ https://smartrealm.vercel.app/tutorials/ai-assistant/
 https://smartrealm.vercel.app/tutorials/ai-video-toolkit/
 https://smartrealm.vercel.app/tutorials/macao-cartoon-5-steps/
 https://smartrealm.vercel.app/tutorials/ai-brand-film/
+https://smartrealm.vercel.app/tutorials/uni-reel-21-versions/
