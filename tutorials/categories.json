@@ -10,6 +10,7 @@
       "icon": "🎬",
       "description": "用 AI 一個人做短片：拆參考、鎖角色、生成、剪接、後期，一步步跟住做。",
       "tutorials": [
+        { "title": "以為佢表白，點知叫我送貨：17 秒誤會短片 4 個好睇位", "url": "/tutorials/gulang-yuki-delivery/", "date": "2026-11-21" },
         { "title": "一條 23 秒海膽片，點解改咗 21 版？", "url": "/tutorials/uni-reel-21-versions/", "date": "2026-11-21" },
         { "title": "客要 1 分鐘，額度得 30 秒：AI 品牌片 6 步做法", "url": "/tutorials/ai-brand-film/", "date": "2026-11-19" },
         { "title": "一個人用 AI 做 30 秒澳門卡通：5 步製作過程", "url": "/tutorials/macao-cartoon-5-steps/", "date": "2026-11-18" },
